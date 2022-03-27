@@ -1,29 +1,43 @@
-VERBOSE ?= 0 
+### Tools ###
+COMPILER_DIR := tools/mwcc_compiler/1.3
+AS      := $(DEVKITPPC)/bin/powerpc-eabi-as
+LD      := $(COMPILER_DIR)/mwldeppc.exe
+OBJCOPY := $(DEVKITPPC)/bin/powerpc-eabi-objcopy
+HOSTCC  := cc
+SHA1SUM := sha1sum
+ELF2DOL := tools/elf2dol
 
-ifeq ($(VERBOSE),0)
-  QUIET := @
-endif
+ASFLAGS := -mgekko -I asm
 
-# source files
-ASM_DIR := asm
-CODE_FILE := $(ASM_DIR)/code
-BUILD_DIR := build
+### Files ###
+DOL      := rhf.dol
+ELF      := $(DOL:.dol=.elf)
+LDSCRIPT := ldscript.lcf
+S_FILES  := asm/code.s
+C_FILES  :=
+O_FILES  := $(S_FILES:.s=.o) $(C_FILES:.c=.o)
 
-# Make sure build directory exists before compiling anything
-DUMMY != mkdir -p $(BUILD_DIR)
-DUMMY1 != mkdir -p $(BUILD_DIR)/$(ASM_DIR)
+#-------------------------------------------------------------------------------
+# Recipes
+#-------------------------------------------------------------------------------
 
-# tools
-MWCC_COMPILER := tools/mwcc_compiler/1.3/mwcceppc.exe
-AS := $(DEVKITPPC)/bin/powerpc-eabi-as
-LD := tools/mwcc_compiler/1.3/mwldeppc.exe
+.PHONY: tools
 
-# flags
-MWCC_FLAGS := --help
-AS_FLAGS := -mgekko -I asm 
+$(DOL): $(ELF) | tools
+	$(ELF2DOL) $(ELF) $(DOL)
+	$(SHA1SUM) -c rhf.sha1
 
-# main stuff
-default:
-	@echo Assembling files...
-	$(QUIET) $(AS) $(AS_FLAGS) $(CODE_FILE).s -o $(BUILD_DIR)/$(CODE_FILE).o
-	@echo Assembled!
+$(ELF): $(LDSCRIPT) $(O_FILES)
+	$(LD) $(O_FILES) -map rhf.map -lcf $(LDSCRIPT) -o $@
+# The Metrowerks linker doesn't generate physical addresses in the ELF program headers. This fixes it somehow.
+	$(OBJCOPY) $(ELF) $(ELF)
+
+%.o: %.s
+	$(AS) $(ASFLAGS) -o $@ $<
+
+clean:
+	$(RM) $(DOL) $(ELF) $(O_FILES)
+	$(MAKE) -C tools clean
+
+tools:
+	$(MAKE) -C tools

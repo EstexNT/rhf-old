@@ -3,9 +3,9 @@ _SDA2_BASE_ = 0x80328FE0;
 SECTIONS
 {
     .text0 BIND(0x80004000) : { *(.text0) }
-    .text1 BIND(0x80006F00) : { *(.text1) }
     .data0 BIND(0x80006720) : { *(.data0) }
     .data1 BIND(0x80006A60) : { *(.data1) }
+    .text1 BIND(0x80006F00) : { *(.text1) }
     .data2 BIND(0x801F74E0) : { *(.data2) }
     .data3 BIND(0x801F7580) : { *(.data3) }
     .data4 BIND(0x801F75A0) : { *(.data4) }
