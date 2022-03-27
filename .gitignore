@@ -4,6 +4,8 @@ doldisasm.py
 *.dol
 *.elf
 *.o
+*.map
+
 
 *.exe
 tools/elf2dol
