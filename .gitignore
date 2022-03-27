@@ -1,0 +1,11 @@
+tools/mwcc_compiler/
+doldisasm.py
+
+*.dol
+*.elf
+*.o
+
+*.exe
+tools/elf2dol
+
+build/
