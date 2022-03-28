@@ -1,6 +1,6 @@
 # Tools
 COMPILER_DIR := tools/mwcc_compiler/Wii/1.3
-LINKER_DIR := tools/mwcc_compiler/GC/1.1
+LINKER_DIR := tools/mwcc_compiler/GC/2.5
 AS := $(DEVKITPPC)/bin/powerpc-eabi-as
 CC := $(COMPILER_DIR)/mwcceppc.exe
 LD := $(LINKER_DIR)/mwldeppc.exe
@@ -43,7 +43,7 @@ $(BUILD_DIR)/%.o: %.s
 	$(AS) $(ASFLAGS) -o $@ $<
 
 clean:
-	$(RM) $(DOL) $(ELF) $(O_FILES)
+	$(RM) $(DOL) $(ELF) $(O_FILES) $(BUILD_DIR)/rhf.map
 	rmdir $(BUILD_DIR)/$(ASM_DIRS) $(BUILD_DIR)/$(SRC_DIRS) $(BUILD_DIR)
 	$(MAKE) -C tools clean
 
