@@ -36,8 +36,6 @@ $(DOL): $(ELF) | tools
 
 $(ELF): $(LDSCRIPT) $(O_FILES)
 	$(LD) $(O_FILES) -map $(BUILD_DIR)/rhf.map -lcf $(LDSCRIPT) -o $@
-# The Metrowerks linker doesn't generate physical addresses in the ELF program headers. This fixes it somehow.
-	$(OBJCOPY) $(ELF) $(ELF)
 
 $(BUILD_DIR)/%.o: %.s
 	$(AS) $(ASFLAGS) -o $@ $<
