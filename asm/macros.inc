@@ -1,3 +1,26 @@
+/*
+Code sections:
+    .init:       0x00000100  0x80004000  0x80006720
+    .text:       0x00002820  0x80006F00  0x801F74E0
+Other sections:
+    .extab: 	 0x001F2E00  0x80006720  0x80006A60
+    .extabindex  0x001F3140  0x80006A60  0x80006F00
+    .ctors:      0x001F35E0  0x801F74E0  0x801F7580
+    .dtors:      0x001F3680  0x801F7580  0x801F75A0
+    .rodata:     0x001F36A0  0x801F75A0  0x802E5740
+    .data:       0x002E1840  0x802E5740  0x8031EEC0
+    .sdata:      0x0031AFC0  0x8031EEC0  0x80320140
+    .sbss:       0x00000000  0x80320140  0x80320FE0
+    .sdata2:     0x0031C240  0x80320FE0  0x80329940
+    .sbss2:      0x00000000  0x80329940  0x80329980
+    .bss:        0x00000000  0x80329980  0x803D5D88
+Entry Point: 0x80004050
+
+_stack_addr: 0x803E5D88
+
+*/
+
+
 # PowerPC Register Constants
 .set r0, 0
 .set r1, 1

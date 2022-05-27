@@ -2,7 +2,7 @@ CC := gcc
 CFLAGS := -O3 -Wall -s
 
 elf2dol: elf2dol.c
-	$(CC) $(CFLAGS) -o $@ $^
+	@$(CC) $(CFLAGS) -o $@ $^
 
 clean:
-	$(RM) elf2dol
+	@$(RM) elf2dol
