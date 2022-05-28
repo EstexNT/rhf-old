@@ -20,5 +20,4 @@ main.dol: `sha1: d96d2c7e50b0c713cb8fcb18835258351ada5576`
 	- -j Allows make to use multiple threads, speeding up the process.
 
 * OPTIONAL:
-	- Obtain a clean DOL of Rhythm Heaven Fever (US) and place it in the base working directory and rename it to `baserom.dol`.
 	- To generate a linker map (takes a considerable amount of time), run `make MAPGENFLAG=1 -j`

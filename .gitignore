@@ -10,5 +10,6 @@ tools/elf2dol
 
 tools/doldisasm.py
 tools/deincbin.py
+tools/deinc.bat
 
 tools/mwcc_compiler/
