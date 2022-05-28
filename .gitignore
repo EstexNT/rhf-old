@@ -1,13 +1,14 @@
-tools/mwcc_compiler/
-doldisasm.py
-
+build/
 *.dol
 *.elf
 *.o
 *.map
 
-
 *.exe
+
 tools/elf2dol
 
-build/
+tools/doldisasm.py
+tools/deincbin.py
+
+tools/mwcc_compiler/

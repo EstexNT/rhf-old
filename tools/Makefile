@@ -5,4 +5,5 @@ elf2dol: elf2dol.c
 	@$(CC) $(CFLAGS) -o $@ $^
 
 clean:
+	@$(RM) elf2dol.exe
 	@$(RM) elf2dol
