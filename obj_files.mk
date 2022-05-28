@@ -1,8 +1,14 @@
 INIT_O_FILES :=\
 	$(BUILD_DIR)/asm/init.o
 
-TEXT_O_FILES :=\
-	$(BUILD_DIR)/asm/text.o
+GAME_O_FILES :=\
+	$(BUILD_DIR)/asm/game.o
+
+LIB_O_FILES :=\
+	$(BUILD_DIR)/asm/lib.o
+
+GAME_UTIL_FILES :=\
+	$(BUILD_DIR)/asm/game_util.o
 
 EXTAB_O_FILES :=\
 	$(BUILD_DIR)/asm/extab.o
@@ -15,24 +21,3 @@ CTORS_O_FILES :=\
 
 DTORS_O_FILES :=\
 	$(BUILD_DIR)/asm/dtors.o
-
-RODATA_O_FILES :=\
-	$(BUILD_DIR)/asm/rodata.o
-
-DATA_O_FILES :=\
-	$(BUILD_DIR)/asm/data.o
-
-SDATA_O_FILES :=\
-    $(BUILD_DIR)/asm/sdata.o
-
-SBSS_O_FILES :=\
-    $(BUILD_DIR)/asm/sbss.o
-
-SDATA2_O_FILES :=\
-    $(BUILD_DIR)/asm/sdata2.o
-
-SBSS2_O_FILES :=\
-    $(BUILD_DIR)/asm/sbss2.o
-
-BSS_O_FILES :=\
-	$(BUILD_DIR)/asm/bss.o

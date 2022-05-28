@@ -1,6 +1,8 @@
 .include "macros.inc"
 
 .section extab_, "wa"  # 0x80006720 - 0x80006A60
+.global lbl_80006720
+lbl_80006720:
 
 	# ROM: 0x1F2E00
 	.4byte 0x28080000
