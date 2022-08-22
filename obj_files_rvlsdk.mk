@@ -12,17 +12,17 @@ RVL_SDK_OS_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/os/OSError.o \
 	$(BUILD_DIR)/asm/RevoSDK/os/OSExec.o \
 	$(BUILD_DIR)/asm/RevoSDK/os/OSFatal.o \
-	$(BUILD_DIR)/asm/RevoSDK/os/OSFont.o 
-#	$(BUILD_DIR)/asm/RevoSDK/os/OSInterrupt.o 
-#	$(BUILD_DIR)/asm/RevoSDK/os/OSLink.o 
-#	$(BUILD_DIR)/asm/RevoSDK/os/OSMessage.o 
-#	$(BUILD_DIR)/asm/RevoSDK/os/OSMemory.o 
-#	$(BUILD_DIR)/asm/RevoSDK/os/OSMutex.o 
-#	$(BUILD_DIR)/asm/RevoSDK/os/OSReboot.o 
-#	$(BUILD_DIR)/asm/RevoSDK/os/OSReset.o 
-#	$(BUILD_DIR)/asm/RevoSDK/os/OSRtc.o 
-#	$(BUILD_DIR)/asm/RevoSDK/os/OSSync.o 
-#	$(BUILD_DIR)/asm/RevoSDK/os/OSThread.o 
+	$(BUILD_DIR)/asm/RevoSDK/os/OSFont.o \
+	$(BUILD_DIR)/asm/RevoSDK/os/OSInterrupt.o \
+	$(BUILD_DIR)/asm/RevoSDK/os/OSLink.o \
+	$(BUILD_DIR)/asm/RevoSDK/os/OSMessage.o \
+	$(BUILD_DIR)/asm/RevoSDK/os/OSMemory.o \
+	$(BUILD_DIR)/asm/RevoSDK/os/OSMutex.o \
+	$(BUILD_DIR)/asm/RevoSDK/os/OSReboot.o \
+	$(BUILD_DIR)/asm/RevoSDK/os/OSReset.o \
+	$(BUILD_DIR)/asm/RevoSDK/os/OSRtc.o \
+	$(BUILD_DIR)/asm/RevoSDK/os/OSSync.o \
+	$(BUILD_DIR)/asm/RevoSDK/os/OSThread.o 
 #	$(BUILD_DIR)/asm/RevoSDK/os/OSTime.o 
 #	$(BUILD_DIR)/asm/RevoSDK/os/OSUtf.o 
 #	$(BUILD_DIR)/asm/RevoSDK/os/OSIpc.o 
