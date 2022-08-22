@@ -13,3 +13,5 @@ tools/deincbin.py
 tools/deinc.bat
 
 tools/mwcc_compiler/
+
+.vscode/

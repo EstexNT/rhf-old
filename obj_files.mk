@@ -1,3 +1,5 @@
+include obj_files_rvlsdk.mk
+
 INIT_O_FILES :=\
 	$(BUILD_DIR)/asm/init.o
 
