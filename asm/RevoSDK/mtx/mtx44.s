@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x800D8FF0 - 0x801D3284
 
+.balign 16, 0
 .global func_800E7050
 func_800E7050:
 /* 800E7050 000E2970  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -63,8 +64,8 @@ func_800E7050:
 /* 800E7130 000E2A50  7C 08 03 A6 */	mtlr r0
 /* 800E7134 000E2A54  38 21 00 40 */	addi r1, r1, 0x40
 /* 800E7138 000E2A58  4E 80 00 20 */	blr 
-/* 800E713C 000E2A5C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800E7140
 func_800E7140:
 /* 800E7140 000E2A60  ED 64 18 28 */	fsubs f11, f4, f3
@@ -105,8 +106,6 @@ func_800E7140:
 /* 800E71CC 000E2AEC  D0 43 00 1C */	stfs f2, 0x1c(r3)
 /* 800E71D0 000E2AF0  D0 23 00 28 */	stfs f1, 0x28(r3)
 /* 800E71D4 000E2AF4  4E 80 00 20 */	blr 
-/* 800E71D8 000E2AF8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800E71DC 000E2AFC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
 
 .section .sdata2, "wa"  # 0x80328848 - 0x80329520

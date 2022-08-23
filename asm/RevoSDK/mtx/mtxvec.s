@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x800D8FF0 - 0x801D3284
 
+.balign 16, 0
 .global func_800E6FF0
 func_800E6FF0:
 /* 800E6FF0 000E2910  E0 04 00 00 */	psq_l f0, 0(r4), 0, qr0
@@ -25,6 +26,3 @@ func_800E6FF0:
 /* 800E7038 000E2958  10 C5 29 94 */	ps_sum0 f6, f5, f6, f5
 /* 800E703C 000E295C  F0 C5 80 08 */	psq_st f6, 8(r5), 1, qr0
 /* 800E7040 000E2960  4E 80 00 20 */	blr 
-/* 800E7044 000E2964  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800E7048 000E2968  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800E704C 000E296C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
