@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x800D8FF0 - 0x800DA4B0
 
+.balign 16, 0
 .global func_800D8FF0
 func_800D8FF0:
 /* 800D8FF0 000D4910  7C 60 00 A6 */	mfmsr r3
@@ -79,9 +80,8 @@ lbl_800D9090:
 /* 800D910C 000D4A2C  FF E0 00 90 */	fmr f31, f0
 /* 800D9110 000D4A30  FD FE 05 8E */	mtfsf 0xff, f0
 /* 800D9114 000D4A34  4E 80 00 20 */	blr 
-/* 800D9118 000D4A38  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800D911C 000D4A3C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800D9120
 func_800D9120:
 /* 800D9120 000D4A40  3C 80 C0 00 */	lis r4, 0xC0003144@ha
@@ -111,8 +111,8 @@ func_800D9120:
 /* 800D9180 000D4AA0  98 83 00 05 */	stb r4, 5(r3)
 /* 800D9184 000D4AA4  B0 03 00 06 */	sth r0, 6(r3)
 /* 800D9188 000D4AA8  4E 80 00 20 */	blr 
-/* 800D918C 000D4AAC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800D9190
 func_800D9190:
 /* 800D9190 000D4AB0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -290,10 +290,8 @@ lbl_800D93D0:
 /* 800D93D8 000D4CF8  7C 08 03 A6 */	mtlr r0
 /* 800D93DC 000D4CFC  38 21 00 10 */	addi r1, r1, 0x10
 /* 800D93E0 000D4D00  4E 80 00 20 */	blr 
-/* 800D93E4 000D4D04  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800D93E8 000D4D08  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800D93EC 000D4D0C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800D93F0
 func_800D93F0:
 /* 800D93F0 000D4D10  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -430,8 +428,8 @@ lbl_800D95B4:
 /* 800D95C0 000D4EE0  7C 08 03 A6 */	mtlr r0
 /* 800D95C4 000D4EE4  38 21 00 10 */	addi r1, r1, 0x10
 /* 800D95C8 000D4EE8  4E 80 00 20 */	blr 
-/* 800D95CC 000D4EEC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800D95D0
 func_800D95D0:
 /* 800D95D0 000D4EF0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -570,9 +568,9 @@ lbl_800D979C:
 /* 800D97A8 000D50C8  7C 08 03 A6 */	mtlr r0
 /* 800D97AC 000D50CC  38 21 00 10 */	addi r1, r1, 0x10
 /* 800D97B0 000D50D0  4E 80 00 20 */	blr 
-/* 800D97B4 000D50D4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800D97B8 000D50D8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800D97BC 000D50DC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+
+.balign 16, 0
+.global lbl_800D97C0
 lbl_800D97C0:
 /* 800D97C0 000D50E0  80 04 00 0C */	lwz r0, 0xc(r4)
 /* 800D97C4 000D50E4  2C 00 00 00 */	cmpwi r0, 0
@@ -591,8 +589,8 @@ lbl_800D97EC:
 /* 800D97F0 000D5110  38 00 00 01 */	li r0, 1
 /* 800D97F4 000D5114  B0 03 30 E6 */	sth r0, 0x800030E6@l(r3)
 /* 800D97F8 000D5118  4E 80 00 20 */	blr 
-/* 800D97FC 000D511C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800D9800
 func_800D9800:
 /* 800D9800 000D5120  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -781,17 +779,15 @@ lbl_800D99BC:
 /* 800D9A98 000D53B8  7C 08 03 A6 */	mtlr r0
 /* 800D9A9C 000D53BC  38 21 00 10 */	addi r1, r1, 0x10
 /* 800D9AA0 000D53C0  4E 80 00 20 */	blr 
-/* 800D9AA4 000D53C4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800D9AA8 000D53C8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800D9AAC 000D53CC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800D9AB0
 func_800D9AB0:
 /* 800D9AB0 000D53D0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 800D9AB4 000D53D4  7C 08 02 A6 */	mflr r0
-/* 800D9AB8 000D53D8  3C 60 80 3E */	lis r3, 0x803E7D88@ha
+/* 800D9AB8 000D53D8  3C 60 80 3E */	lis r3, _db_stack_addr@ha
 /* 800D9ABC 000D53DC  90 01 00 34 */	stw r0, 0x34(r1)
-/* 800D9AC0 000D53E0  38 63 7D 88 */	addi r3, r3, 0x803E7D88@l
+/* 800D9AC0 000D53E0  38 63 7D 88 */	addi r3, r3, _db_stack_addr@l 
 /* 800D9AC4 000D53E4  93 E1 00 2C */	stw r31, 0x2c(r1)
 /* 800D9AC8 000D53E8  3F E0 80 2F */	lis r31, lbl_802F13D0@ha
 /* 800D9ACC 000D53EC  3B FF 13 D0 */	addi r31, r31, lbl_802F13D0@l
@@ -882,8 +878,8 @@ lbl_800D9BF8:
 /* 800D9C14 000D5534  80 04 00 00 */	lwz r0, 0(r4)
 /* 800D9C18 000D5538  28 00 00 02 */	cmplwi r0, 2
 /* 800D9C1C 000D553C  40 80 00 1C */	bge lbl_800D9C38
-/* 800D9C20 000D5540  3C 60 80 3E */	lis r3, 0x803E5D88@ha
-/* 800D9C24 000D5544  38 63 5D 88 */	addi r3, r3, 0x803E5D88@l
+/* 800D9C20 000D5540  3C 60 80 3E */	lis r3, _stack_addr@ha
+/* 800D9C24 000D5544  38 63 5D 88 */	addi r3, r3, _stack_addr@l
 /* 800D9C28 000D5548  38 03 00 1F */	addi r0, r3, 0x1f
 /* 800D9C2C 000D554C  54 03 00 34 */	rlwinm r3, r0, 0, 0, 0x1a
 /* 800D9C30 000D5550  48 00 00 08 */	b lbl_800D9C38
@@ -921,8 +917,8 @@ lbl_800D9C68:
 /* 800D9C9C 000D55BC  80 04 00 00 */	lwz r0, 0(r4)
 /* 800D9CA0 000D55C0  28 00 00 02 */	cmplwi r0, 2
 /* 800D9CA4 000D55C4  40 80 00 34 */	bge lbl_800D9CD8
-/* 800D9CA8 000D55C8  3C 60 80 3E */	lis r3, 0x803E5D88@ha
-/* 800D9CAC 000D55CC  38 63 5D 88 */	addi r3, r3, 0x803E5D88@l
+/* 800D9CA8 000D55C8  3C 60 80 3E */	lis r3, _stack_addr@ha
+/* 800D9CAC 000D55CC  38 63 5D 88 */	addi r3, r3, _stack_addr@l
 /* 800D9CB0 000D55D0  38 03 00 1F */	addi r0, r3, 0x1f
 /* 800D9CB4 000D55D4  54 03 00 34 */	rlwinm r3, r0, 0, 0, 0x1a
 /* 800D9CB8 000D55D8  48 00 00 20 */	b lbl_800D9CD8
@@ -1159,9 +1155,8 @@ lbl_800D9FE8:
 /* 800D9FFC 000D591C  7C 08 03 A6 */	mtlr r0
 /* 800DA000 000D5920  38 21 00 30 */	addi r1, r1, 0x30
 /* 800DA004 000D5924  4E 80 00 20 */	blr 
-/* 800DA008 000D5928  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800DA00C 000D592C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800DA010
 func_800DA010:
 /* 800DA010 000D5930  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -1205,7 +1200,7 @@ lbl_800DA08C:
 /* 800DA0A4 000D59C4  7E E4 18 50 */	subf r23, r4, r3
 /* 800DA0A8 000D59C8  3B 5A 17 A0 */	addi r26, r26, lbl_802F17A0@l
 /* 800DA0AC 000D59CC  3F 20 60 00 */	lis r25, 0x6000
-/* 800DA0B0 000D59D0  3F 00 80 0E */	lis r24, 0x800e
+/* 800DA0B0 000D59D0  3F 00 80 0E */	lis r24, __DBVECTOR@ha
 lbl_800DA0B4:
 /* 800DA0B4 000D59D4  80 6D 97 64 */	lwz r3, lbl_80320624-_SDA_BASE_(r13)
 /* 800DA0B8 000D59D8  2C 03 00 00 */	cmpwi r3, 0
@@ -1219,7 +1214,7 @@ lbl_800DA0CC:
 /* 800DA0D4 000D59F4  7F A0 03 78 */	or r0, r29, r0
 /* 800DA0D8 000D59F8  38 77 00 03 */	addi r3, r23, 3
 /* 800DA0DC 000D59FC  90 1E 00 00 */	stw r0, 0(r30)
-/* 800DA0E0 000D5A00  38 98 A2 F8 */	addi r4, r24, -23816
+/* 800DA0E0 000D5A00  38 98 A2 F8 */	addi r4, r24, __DBVECTOR@l
 /* 800DA0E4 000D5A04  54 63 F0 BE */	srwi r3, r3, 2
 /* 800DA0E8 000D5A08  40 81 00 54 */	ble lbl_800DA13C
 /* 800DA0EC 000D5A0C  54 60 E8 FF */	rlwinm. r0, r3, 0x1d, 3, 0x1f
@@ -1305,9 +1300,9 @@ lbl_800DA174:
 /* 800DA218 000D5B38  7C 08 03 A6 */	mtlr r0
 /* 800DA21C 000D5B3C  38 21 00 30 */	addi r1, r1, 0x30
 /* 800DA220 000D5B40  4E 80 00 20 */	blr 
-/* 800DA224 000D5B44  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800DA228 000D5B48  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800DA22C 000D5B4C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+
+.balign 16, 0
+.global lbl_800DA230
 lbl_800DA230:
 /* 800DA230 000D5B50  38 A0 00 40 */	li r5, 0x40
 /* 800DA234 000D5B54  7C 68 02 A6 */	mflr r3
@@ -1318,17 +1313,17 @@ lbl_800DA230:
 /* 800DA248 000D5B68  38 60 00 30 */	li r3, 0x30
 /* 800DA24C 000D5B6C  7C 60 01 24 */	mtmsr r3
 /* 800DA250 000D5B70  4E 80 00 20 */	blr 
+
+.global lbl_800DA254
 lbl_800DA254:
-/* 800DA254 000D5B74  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800DA258 000D5B78  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800DA25C 000D5B7C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+
+.balign 16, 0
+.global lbl_800DA260
 lbl_800DA260:
 /* 800DA260 000D5B80  48 00 00 63 */	bla 0x60
 lbl_800DA264:
-/* 800DA264 000D5B84  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800DA268 000D5B88  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800DA26C 000D5B8C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800DA270
 func_800DA270:
 /* 800DA270 000D5B90  80 AD 97 54 */	lwz r5, lbl_80320614-_SDA_BASE_(r13)
@@ -1336,16 +1331,17 @@ func_800DA270:
 /* 800DA278 000D5B98  7C 65 00 2E */	lwzx r3, r5, r0
 /* 800DA27C 000D5B9C  7C 85 01 2E */	stwx r4, r5, r0
 /* 800DA280 000D5BA0  4E 80 00 20 */	blr 
-/* 800DA284 000D5BA4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800DA288 000D5BA8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800DA28C 000D5BAC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800DA290
 func_800DA290:
 /* 800DA290 000D5BB0  80 8D 97 54 */	lwz r4, lbl_80320614-_SDA_BASE_(r13)
 /* 800DA294 000D5BB4  54 60 15 BA */	rlwinm r0, r3, 2, 0x16, 0x1d
 /* 800DA298 000D5BB8  7C 64 00 2E */	lwzx r3, r4, r0
 /* 800DA29C 000D5BBC  4E 80 00 20 */	blr 
+
+.balign 16, 0
+.global lbl_800DA2A0
 lbl_800DA2A0:
 /* 800DA2A0 000D5BC0  7C 90 43 A6 */	mtspr 0x110, r4
 /* 800DA2A4 000D5BC4  80 80 00 C0 */	lwz r4, 0xc0(0)
@@ -1369,10 +1365,16 @@ lbl_800DA2A0:
 /* 800DA2EC 000D5C0C  7C 7B 02 A6 */	mfspr r3, 0x1b
 /* 800DA2F0 000D5C10  90 64 01 9C */	stw r3, 0x19c(r4)
 /* 800DA2F4 000D5C14  7C 65 1B 78 */	mr r5, r3
+
+.global __DBVECTOR
+__DBVECTOR:
 /* 800DA2F8 000D5C18  60 00 00 00 */	nop 
 /* 800DA2FC 000D5C1C  7C 60 00 A6 */	mfmsr r3
 /* 800DA300 000D5C20  60 63 00 30 */	ori r3, r3, 0x30
 /* 800DA304 000D5C24  7C 7B 03 A6 */	mtspr 0x1b, r3
+
+.global __OSEVSetNumber
+__OSEVSetNumber:
 /* 800DA308 000D5C28  38 60 00 00 */	li r3, 0
 /* 800DA30C 000D5C2C  80 80 00 D4 */	lwz r4, 0xd4(0)
 /* 800DA310 000D5C30  54 A5 07 BD */	rlwinm. r5, r5, 0, 0x1e, 0x1e
@@ -1386,10 +1388,12 @@ lbl_800DA328:
 /* 800DA32C 000D5C4C  80 A5 30 00 */	lwz r5, 0x3000(r5)
 /* 800DA330 000D5C50  7C BA 03 A6 */	mtspr 0x1a, r5
 /* 800DA334 000D5C54  4C 00 00 64 */	rfi 
+
+.global lbl_800DA338
 lbl_800DA338:
 /* 800DA338 000D5C58  60 00 00 00 */	nop 
-/* 800DA33C 000D5C5C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global lbl_800DA340
 lbl_800DA340:
 /* 800DA340 000D5C60  90 04 00 00 */	stw r0, 0(r4)
@@ -1414,9 +1418,8 @@ lbl_800DA340:
 /* 800DA38C 000D5CAC  7C D3 02 A6 */	mfdar r6
 /* 800DA390 000D5CB0  94 21 FF F8 */	stwu r1, -8(r1)
 /* 800DA394 000D5CB4  48 00 25 1C */	b lbl_800DC8B0
-/* 800DA398 000D5CB8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800DA39C 000D5CBC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800DA3A0
 func_800DA3A0:
 /* 800DA3A0 000D5CC0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1440,10 +1443,8 @@ func_800DA3A0:
 /* 800DA3E8 000D5D08  7C 08 03 A6 */	mtlr r0
 /* 800DA3EC 000D5D0C  38 21 00 10 */	addi r1, r1, 0x10
 /* 800DA3F0 000D5D10  4E 80 00 20 */	blr 
-/* 800DA3F4 000D5D14  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800DA3F8 000D5D18  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800DA3FC 000D5D1C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800DA400
 func_800DA400:
 /* 800DA400 000D5D20  3C 60 CD 00 */	lis r3, 0xCD006024@ha
@@ -1451,6 +1452,7 @@ func_800DA400:
 /* 800DA408 000D5D28  54 03 06 3E */	clrlwi r3, r0, 0x18
 /* 800DA40C 000D5D2C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_800DA410
 func_800DA410:
 /* 800DA410 000D5D30  7C 64 1B 78 */	mr r4, r3
@@ -1458,6 +1460,7 @@ func_800DA410:
 /* 800DA418 000D5D38  4C C6 31 82 */	crclr 6
 /* 800DA41C 000D5D3C  48 00 20 44 */	b func_800DC460
 
+.balign 16, 0
 .global func_800DA420
 func_800DA420:
 /* 800DA420 000D5D40  80 0D 97 30 */	lwz r0, lbl_803205F0-_SDA_BASE_(r13)
@@ -1497,10 +1500,8 @@ lbl_800DA470:
 /* 800DA498 000D5DB8  98 85 00 03 */	stb r4, 3(r5)
 /* 800DA49C 000D5DBC  98 05 00 04 */	stb r0, 4(r5)
 /* 800DA4A0 000D5DC0  4E 80 00 20 */	blr 
-/* 800DA4A4 000D5DC4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800DA4A8 000D5DC8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800DA4AC 000D5DCC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800DA4B0
 func_800DA4B0:
 /* 800DA4B0 000D5DD0  80 0D 97 30 */	lwz r0, lbl_803205F0-_SDA_BASE_(r13)
@@ -1524,13 +1525,17 @@ lbl_802F13D0:
 	.asciz "<< RVL_SDK - OS \trelease build: Jul  2 2010 02:08:00 (0x4302_145) >>"
 	.balign 4
 	.asciz "\nRevolution OS\n"
+	.balign 4
 	.asciz "Kernel built : %s %s\n"
 	.balign 4
 	.asciz "Jul  2 2010"
+	.balign 4
 	.asciz "02:08:00"
 	.balign 4
 	.asciz "Console Type : "
+	.balign 4
 	.asciz "Pre-production board 1\n"
+	.balign 4
 	.asciz "Pre-production board 2-1\n"
 	.balign 4
 	.asciz "Pre-production board 2-2\n"
@@ -1556,6 +1561,7 @@ lbl_802F13D0:
 	.asciz "Firmware     : %d.%d.%d "
 	.balign 4
 	.asciz "(%d/%d/%d)\n"
+	.balign 4
 	.asciz "Memory %d MB\n"
 	.balign 4
 	.asciz "MEM1 Arena : 0x%x - 0x%x\n"
@@ -1563,10 +1569,13 @@ lbl_802F13D0:
 	.asciz "MEM2 Arena : 0x%x - 0x%x\n"
 	.balign 4
 	.asciz "OS ERROR: boot program is not for RVL target. Please use correct boot program.\n"
+	.balign 4
 	.asciz "Failed to run app"
 	.balign 4
-	.4byte 0
+	.asciz ""
+	.balign 4
 	.asciz "OS ERROR: apploader[D].img is not for RVL target. Please use correct apploader[D].img.\n"
+	.balign 4
 	.asciz "OS ERROR: This firmware is an improper version for this SDK. Please use a correct Firmware.\n"
 	.balign 4
 	.asciz "\n\nERROR #002\nAn error has occurred.\nPress the Eject Button, remove the\nGame Disc, and turn off the power to \nthe console. \nPlease read the Wii Operations Manual \nfor further instructions.\n"
@@ -1603,7 +1612,7 @@ lbl_802F17A0:
 lbl_8031FA68:
 
 	# ROM: 0x31BB68
-	.4byte 0x802F13D0  ;# ptr
+	.4byte lbl_802F13D0
 
 
 .global lbl_8031FA6C

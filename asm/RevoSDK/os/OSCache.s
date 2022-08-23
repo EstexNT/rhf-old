@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x800D8FF0 - 0x801D3284
 
+.balign 16, 0
 .global func_800DB680
 func_800DB680:
 /* 800DB680 000D6FA0  7C 00 04 AC */	sync 0
@@ -9,10 +10,8 @@ func_800DB680:
 /* 800DB688 000D6FA8  60 63 40 00 */	ori r3, r3, 0x4000
 /* 800DB68C 000D6FAC  7C 70 FB A6 */	mtspr 0x3f0, r3
 /* 800DB690 000D6FB0  4E 80 00 20 */	blr 
-/* 800DB694 000D6FB4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800DB698 000D6FB8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800DB69C 000D6FBC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800DB6A0
 func_800DB6A0:
 /* 800DB6A0 000D6FC0  28 04 00 00 */	cmplwi r4, 0
@@ -27,8 +26,8 @@ lbl_800DB6BC:
 /* 800DB6C0 000D6FE0  38 63 00 20 */	addi r3, r3, 0x20
 /* 800DB6C4 000D6FE4  42 00 FF F8 */	bdnz lbl_800DB6BC
 /* 800DB6C8 000D6FE8  4E 80 00 20 */	blr 
-/* 800DB6CC 000D6FEC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800DB6D0
 func_800DB6D0:
 /* 800DB6D0 000D6FF0  28 04 00 00 */	cmplwi r4, 0
@@ -45,6 +44,7 @@ lbl_800DB6EC:
 /* 800DB6F8 000D7018  44 00 00 02 */	sc 
 /* 800DB6FC 000D701C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_800DB700
 func_800DB700:
 /* 800DB700 000D7020  28 04 00 00 */	cmplwi r4, 0
@@ -61,6 +61,7 @@ lbl_800DB71C:
 /* 800DB728 000D7048  44 00 00 02 */	sc 
 /* 800DB72C 000D704C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_800DB730
 func_800DB730:
 /* 800DB730 000D7050  28 04 00 00 */	cmplwi r4, 0
@@ -75,8 +76,8 @@ lbl_800DB74C:
 /* 800DB750 000D7070  38 63 00 20 */	addi r3, r3, 0x20
 /* 800DB754 000D7074  42 00 FF F8 */	bdnz lbl_800DB74C
 /* 800DB758 000D7078  4E 80 00 20 */	blr 
-/* 800DB75C 000D707C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800DB760
 func_800DB760:
 /* 800DB760 000D7080  28 04 00 00 */	cmplwi r4, 0
@@ -91,8 +92,8 @@ lbl_800DB77C:
 /* 800DB780 000D70A0  38 63 00 20 */	addi r3, r3, 0x20
 /* 800DB784 000D70A4  42 00 FF F8 */	bdnz lbl_800DB77C
 /* 800DB788 000D70A8  4E 80 00 20 */	blr 
-/* 800DB78C 000D70AC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800DB790
 func_800DB790:
 /* 800DB790 000D70B0  28 04 00 00 */	cmplwi r4, 0
@@ -109,10 +110,8 @@ lbl_800DB7AC:
 /* 800DB7B8 000D70D8  7C 00 04 AC */	sync 0
 /* 800DB7BC 000D70DC  4C 00 01 2C */	isync 
 /* 800DB7C0 000D70E0  4E 80 00 20 */	blr 
-/* 800DB7C4 000D70E4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800DB7C8 000D70E8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800DB7CC 000D70EC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800DB7D0
 func_800DB7D0:
 /* 800DB7D0 000D70F0  7C 70 FA A6 */	mfspr r3, 0x3f0
@@ -120,6 +119,7 @@ func_800DB7D0:
 /* 800DB7D8 000D70F8  7C 70 FB A6 */	mtspr 0x3f0, r3
 /* 800DB7DC 000D70FC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_800DB7E0
 func_800DB7E0:
 /* 800DB7E0 000D7100  4C 00 01 2C */	isync 
@@ -127,10 +127,8 @@ func_800DB7E0:
 /* 800DB7E8 000D7108  60 63 80 00 */	ori r3, r3, 0x8000
 /* 800DB7EC 000D710C  7C 70 FB A6 */	mtspr 0x3f0, r3
 /* 800DB7F0 000D7110  4E 80 00 20 */	blr 
-/* 800DB7F4 000D7114  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800DB7F8 000D7118  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800DB7FC 000D711C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800DB800
 func_800DB800:
 /* 800DB800 000D7120  7C A0 00 A6 */	mfmsr r5
@@ -186,8 +184,8 @@ lbl_800DB88C:
 /* 800DB8C0 000D71E0  60 00 00 00 */	nop 
 /* 800DB8C4 000D71E4  60 00 00 00 */	nop 
 /* 800DB8C8 000D71E8  4E 80 00 20 */	blr 
-/* 800DB8CC 000D71EC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800DB8D0
 func_800DB8D0:
 /* 800DB8D0 000D71F0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -204,9 +202,8 @@ func_800DB8D0:
 /* 800DB8FC 000D721C  7C 08 03 A6 */	mtlr r0
 /* 800DB900 000D7220  38 21 00 10 */	addi r1, r1, 0x10
 /* 800DB904 000D7224  4E 80 00 20 */	blr 
-/* 800DB908 000D7228  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800DB90C 000D722C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800DB910
 func_800DB910:
 /* 800DB910 000D7230  3C 60 E0 00 */	lis r3, 0xE0000020@ha
@@ -220,15 +217,16 @@ lbl_800DB91C:
 /* 800DB92C 000D724C  54 84 01 04 */	rlwinm r4, r4, 0, 4, 2
 /* 800DB930 000D7250  7C 98 E3 A6 */	mtspr 0x398, r4
 /* 800DB934 000D7254  4E 80 00 20 */	blr 
-/* 800DB938 000D7258  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800DB93C 000D725C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800DB940
 func_800DB940:
 /* 800DB940 000D7260  7C 98 E2 A6 */	mfspr r4, 0x398
 /* 800DB944 000D7264  54 83 47 3E */	rlwinm r3, r4, 8, 0x1c, 0x1f
 /* 800DB948 000D7268  4E 80 00 20 */	blr 
-/* 800DB94C 000D726C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+
+.balign 16, 0
+.global lbl_800DB950
 lbl_800DB950:
 /* 800DB950 000D7270  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 800DB954 000D7274  7C 08 02 A6 */	mflr r0
@@ -319,9 +317,8 @@ lbl_800DBA74:
 /* 800DBA8C 000D73AC  7C 08 03 A6 */	mtlr r0
 /* 800DBA90 000D73B0  38 21 00 80 */	addi r1, r1, 0x80
 /* 800DBA94 000D73B4  4E 80 00 20 */	blr 
-/* 800DBA98 000D73B8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800DBA9C 000D73BC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800DBAA0
 func_800DBAA0:
 /* 800DBAA0 000D73C0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -387,8 +384,6 @@ lbl_800DBB64:
 /* 800DBB7C 000D749C  7C 08 03 A6 */	mtlr r0
 /* 800DBB80 000D74A0  38 21 00 10 */	addi r1, r1, 0x10
 /* 800DBB84 000D74A4  4E 80 00 20 */	blr 
-/* 800DBB88 000D74A8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800DBB8C 000D74AC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
 
 .section .data, "wa"  # 0x802F17E0 - 0x80315F30
@@ -399,11 +394,15 @@ lbl_802F1870:
 
 	# ROM: 0x2ED970
 	.asciz "Machine check received\n"
+	.balign 4
 	.asciz "HID2 = 0x%x   SRR1 = 0x%x\n"
 	.balign 4
-	.4byte 0
+	.asciz ""
+	.balign 4
 	.asciz "Machine check was not DMA/locked cache related\n"
+	.balign 4
 	.asciz "DMAErrorHandler(): An error occurred while processing DMA.\n"
+	.balign 4
 	.asciz "The following errors have been detected and cleared :\n"
 	.balign 4
 	.asciz "\t- Requested a locked cache tag that was already in the cache\n"

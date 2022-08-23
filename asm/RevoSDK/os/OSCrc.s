@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x800D8FF0 - 0x801D3284
 
+.balign 16, 0
 .global func_800E6500
 func_800E6500:
 /* 800E6500 000E1E20  2C 04 00 00 */	cmpwi r4, 0
@@ -85,9 +86,6 @@ lbl_800E65F4:
 lbl_800E662C:
 /* 800E662C 000E1F4C  7D 03 40 F8 */	nor r3, r8, r8
 /* 800E6630 000E1F50  4E 80 00 20 */	blr 
-/* 800E6634 000E1F54  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800E6638 000E1F58  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800E663C 000E1F5C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
 
 .section .rodata, "wa"  # 0x802DDDD0 - 0x802E4A88

@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x800D8FF0 - 0x801D3284
 
+.balign 16, 0
 .global func_800DCBB0
 func_800DCBB0:
 /* 800DCBB0 000D84D0  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -109,6 +110,7 @@ lbl_800DCD14:
 /* 800DCD28 000D8648  38 21 00 30 */	addi r1, r1, 0x30
 /* 800DCD2C 000D864C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_800DCD30
 func_800DCD30:
 /* 800DCD30 000D8650  2C 04 00 00 */	cmpwi r4, 0
@@ -214,6 +216,7 @@ lbl_800DCE80:
 /* 800DCE88 000D87A8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 800DCE8C 000D87AC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800DCE90
 func_800DCE90:
 /* 800DCE90 000D87B0  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -343,6 +346,7 @@ lbl_800DD040:
 /* 800DD058 000D8978  4E 80 00 20 */	blr 
 /* 800DD05C 000D897C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800DD060
 func_800DD060:
 /* 800DD060 000D8980  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -361,12 +365,16 @@ func_800DD060:
 /* 800DD094 000D89B4  38 21 00 10 */	addi r1, r1, 0x10
 /* 800DD098 000D89B8  4E 80 00 20 */	blr 
 /* 800DD09C 000D89BC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+
+.balign 16, 0
+.global lbl_800DD0A0
 lbl_800DD0A0:
 /* 800DD0A0 000D89C0  38 00 00 01 */	li r0, 1
 /* 800DD0A4 000D89C4  90 0D 97 A8 */	stw r0, lbl_80320668-_SDA_BASE_(r13)
 /* 800DD0A8 000D89C8  4E 80 00 20 */	blr 
 /* 800DD0AC 000D89CC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800DD0B0
 func_800DD0B0:
 /* 800DD0B0 000D89D0  3C A0 80 00 */	lis r5, 0x800030F0@ha
@@ -382,12 +390,16 @@ lbl_800DD0C8:
 /* 800DD0D4 000D89F4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 800DD0D8 000D89F8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 800DD0DC 000D89FC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+
+.balign 16, 0
+.global lbl_800DD0E0
 lbl_800DD0E0:
 /* 800DD0E0 000D8A00  90 6D 97 A0 */	stw r3, lbl_80320660-_SDA_BASE_(r13)
 /* 800DD0E4 000D8A04  4E 80 00 20 */	blr 
 /* 800DD0E8 000D8A08  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 800DD0EC 000D8A0C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800DD0F0
 func_800DD0F0:
 /* 800DD0F0 000D8A10  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -967,6 +979,7 @@ lbl_800DD8D4:
 /* 800DD8E8 000D9208  4E 80 00 20 */	blr 
 /* 800DD8EC 000D920C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800DD8F0
 func_800DD8F0:
 /* 800DD8F0 000D9210  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1025,6 +1038,7 @@ lbl_800DD9A4:
 /* 800DD9B8 000D92D8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 800DD9BC 000D92DC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800DD9C0
 func_800DD9C0:
 /* 800DD9C0 000D92E0  54 2B 06 FE */	clrlwi r11, r1, 0x1b
@@ -1548,6 +1562,7 @@ lbl_800DE0F8:
 /* 800DE118 000D9A38  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 800DE11C 000D9A3C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800DE120
 func_800DE120:
 /* 800DE120 000D9A40  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -1698,6 +1713,7 @@ lbl_802F1E90:
 	.asciz "\nThe specified game doesn't exist in the disc\n"
 	.balign 4
 	.asciz "\nOSExec(): Failed to exec %d in %d\n"
+	.balign 4
 	.asciz "OSLaunchDisk(): You can't call this API from DVD application.  \n"
 	.balign 4
 	.asciz "OSExec.c"
@@ -1722,6 +1738,7 @@ lbl_802F2038:
 	.asciz "OSLaunchPartition(): You can't call this API from NAND application.  \n"
 	.balign 4
 	.asciz "OSLaunchPartition(): Specified title ID is not DISC application.  \n"
+	.balign 4
 	.asciz "/title/%08x/%08x"
 	.balign 4
 	.asciz "\nOSLaunchPartition(): Failed to get free i-nodes number\n"
@@ -1741,6 +1758,7 @@ lbl_8031FAB0:
 
 	# ROM: 0x31BBB0
 	.asciz "%016llx"
+	.balign 4
 
 
 .global lbl_8031FAB8
@@ -1748,7 +1766,8 @@ lbl_8031FAB0:
 lbl_8031FAB8:
 
 	# ROM: 0x31BBB8
-	.4byte 0x25640000
+	.asciz "%d"
+	.balign 4
 	.4byte 0
 
 

@@ -17,6 +17,7 @@ Other sections:
 Entry Point: 0x80004050
 
 _stack_addr: 0x803E5D88
+_db_stack_addr: 0x803E7D88
 
 */
 

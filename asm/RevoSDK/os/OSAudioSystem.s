@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x800D8FF0 - 0x801D3284
 
+.balign 16, 0
 .global func_800DB1C0
 func_800DB1C0:
 /* 800DB1C0 000D6AE0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -148,6 +149,7 @@ lbl_800DB398:
 /* 800DB3D8 000D6CF8  38 21 00 20 */	addi r1, r1, 0x20
 /* 800DB3DC 000D6CFC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_800DB3E0
 func_800DB3E0:
 /* 800DB3E0 000D6D00  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -279,6 +281,7 @@ lbl_800DB578:
 /* 800DB5A8 000D6EC8  38 21 00 10 */	addi r1, r1, 0x10
 /* 800DB5AC 000D6ECC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_800DB5B0
 func_800DB5B0:
 /* 800DB5B0 000D6ED0  94 21 FF F0 */	stwu r1, -0x10(r1)

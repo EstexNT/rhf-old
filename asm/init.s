@@ -553,7 +553,8 @@ func_80004714:
 /* 80004740 00000840  4E 80 00 20 */	blr 
 .global lbl_80004744
 lbl_80004744:
-.asciz "Metrowerks Target Resident Kernel for PowerPC\0\0"
+.asciz "Metrowerks Target Resident Kernel for PowerPC"
+.balign 4
 /* 80004774 00000874  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 80004778 00000878  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 8000477C 0000087C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */

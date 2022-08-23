@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x800D8FF0 - 0x801D3284
 
+.balign 16, 0
 .global func_800E6640
 func_800E6640:
 /* 800E6640 000E1F60  54 2B 06 FE */	clrlwi r11, r1, 0x1b

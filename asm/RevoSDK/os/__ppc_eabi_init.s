@@ -4,6 +4,7 @@
 
 .section .text, "ax"  # 0x800D8FF0 - 0x801D3284
 
+.balign 16, 0
 .global func_800E6850
 func_800E6850:
 /* 800E6850 000E2170  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -15,6 +16,7 @@ func_800E6850:
 /* 800E6868 000E2188  38 21 00 10 */	addi r1, r1, 0x10
 /* 800E686C 000E218C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_800E6870
 func_800E6870:
 /* 800E6870 000E2190  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -37,9 +39,8 @@ lbl_800E6898:
 /* 800E68AC 000E21CC  7C 08 03 A6 */	mtlr r0
 /* 800E68B0 000E21D0  38 21 00 10 */	addi r1, r1, 0x10
 /* 800E68B4 000E21D4  4E 80 00 20 */	blr 
-/* 800E68B8 000E21D8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800E68BC 000E21DC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800E68C0
 func_800E68C0:
 /* 800E68C0 000E21E0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -63,4 +64,3 @@ lbl_800E68E8:
 /* 800E6900 000E2220  7C 08 03 A6 */	mtlr r0
 /* 800E6904 000E2224  38 21 00 10 */	addi r1, r1, 0x10
 /* 800E6908 000E2228  4E 80 00 20 */	blr 
-/* 800E690C 000E222C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */

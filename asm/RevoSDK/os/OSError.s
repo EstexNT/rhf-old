@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x800D8FF0 - 0x801D3284
 
+.balign 16, 0
 .global func_800DC460
 func_800DC460:
 /* 800DC460 000D7D80  94 21 FF 80 */	stwu r1, -0x80(r1)
@@ -38,13 +39,12 @@ lbl_800DC490:
 /* 800DC4D8 000D7DF8  38 21 00 80 */	addi r1, r1, 0x80
 /* 800DC4DC 000D7DFC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_800DC4E0
 func_800DC4E0:
 /* 800DC4E0 000D7E00  48 02 D9 28 */	b func_80109E08
-/* 800DC4E4 000D7E04  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800DC4E8 000D7E08  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800DC4EC 000D7E0C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800DC4F0
 func_800DC4F0:
 /* 800DC4F0 000D7E10  94 21 FF 70 */	stwu r1, -0x90(r1)
@@ -126,8 +126,8 @@ lbl_800DC5F8:
 /* 800DC610 000D7F30  7C 08 03 A6 */	mtlr r0
 /* 800DC614 000D7F34  38 21 00 90 */	addi r1, r1, 0x90
 /* 800DC618 000D7F38  4E 80 00 20 */	blr 
-/* 800DC61C 000D7F3C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800DC620
 func_800DC620:
 /* 800DC620 000D7F40  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -302,7 +302,8 @@ lbl_800DC880:
 /* 800DC8A0 000D81C0  7C 08 03 A6 */	mtlr r0
 /* 800DC8A4 000D81C4  38 21 00 20 */	addi r1, r1, 0x20
 /* 800DC8A8 000D81C8  4E 80 00 20 */	blr 
-/* 800DC8AC 000D81CC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+
+.balign 16, 0
 .global lbl_800DC8B0
 lbl_800DC8B0:
 /* 800DC8B0 000D81D0  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -510,7 +511,6 @@ lbl_800DCB74:
 /* 800DCBA0 000D84C0  7C 08 03 A6 */	mtlr r0
 /* 800DCBA4 000D84C4  38 21 00 30 */	addi r1, r1, 0x30
 /* 800DCBA8 000D84C8  4E 80 00 20 */	blr 
-/* 800DCBAC 000D84CC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
 
 .section .data, "wa"  # 0x802F17E0 - 0x80315F30
@@ -525,6 +525,7 @@ lbl_802F1BB0:
 	.asciz "\nAddress:      Back Chain    LR Save\n"
 	.balign 4
 	.asciz "0x%08x:   0x%08x    0x%08x\n"
+	.balign 4
 	.asciz "Non-recoverable Exception %d"
 	.balign 4
 	.asciz "Unhandled Exception %d"
@@ -532,11 +533,15 @@ lbl_802F1BB0:
 	.asciz "\nDSISR = 0x%08x                   DAR  = 0x%08x\n"
 	.balign 4
 	.asciz "TB = 0x%016llx\n"
+	.balign 4
 	.asciz "\nInstruction at 0x%x (read from SRR0) attempted to access invalid address 0x%x (read from DAR)\n"
+	.balign 4
 	.asciz "\nAttempted to fetch instruction from invalid address 0x%x (read from SRR0)\n"
+	.balign 4
 	.asciz "\nInstruction at 0x%x (read from SRR0) attempted to access unaligned address 0x%x (read from DAR)\n"
 	.balign 4
 	.asciz "\nProgram exception : Possible illegal instruction/operation at or around 0x%x (read from SRR0)\n"
+	.balign 4
 	.asciz "AI DMA Address =   0x%04x%04x\n"
 	.balign 4
 	.asciz "ARAM DMA Address = 0x%04x%04x\n"
