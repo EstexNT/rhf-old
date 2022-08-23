@@ -32,8 +32,8 @@ func_800E12E0:
 /* 800E1340 000DCC60  7C 08 03 A6 */	mtlr r0
 /* 800E1344 000DCC64  38 21 00 20 */	addi r1, r1, 0x20
 /* 800E1348 000DCC68  4E 80 00 20 */	blr 
-/* 800E134C 000DCC6C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800E1350
 func_800E1350:
 /* 800E1350 000DCC70  80 0D 97 E0 */	lwz r0, lbl_803206A0-_SDA_BASE_(r13)
@@ -41,9 +41,6 @@ func_800E1350:
 /* 800E1358 000DCC78  80 0D 97 E4 */	lwz r0, lbl_803206A4-_SDA_BASE_(r13)
 /* 800E135C 000DCC7C  90 04 00 00 */	stw r0, 0(r4)
 /* 800E1360 000DCC80  4E 80 00 20 */	blr 
-/* 800E1364 000DCC84  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800E1368 000DCC88  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800E136C 000DCC8C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
 
 .section .sbss, "wa"  # 0x803205F0 - 0x80320F80

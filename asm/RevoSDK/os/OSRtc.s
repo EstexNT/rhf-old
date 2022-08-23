@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x800D8FF0 - 0x801D3284
 
+.balign 16, 0
 .global func_800E1CA0
 func_800E1CA0:
 /* 800E1CA0 000DD5C0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -86,9 +87,8 @@ lbl_800E1DBC:
 /* 800E1DCC 000DD6EC  7C 08 03 A6 */	mtlr r0
 /* 800E1DD0 000DD6F0  38 21 00 20 */	addi r1, r1, 0x20
 /* 800E1DD4 000DD6F4  4E 80 00 20 */	blr 
-/* 800E1DD8 000DD6F8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800E1DDC 000DD6FC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800E1DE0
 func_800E1DE0:
 /* 800E1DE0 000DD700  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -231,6 +231,7 @@ lbl_800E1FC8:
 /* 800E1FD8 000DD8F8  38 21 00 20 */	addi r1, r1, 0x20
 /* 800E1FDC 000DD8FC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_800E1FE0
 func_800E1FE0:
 /* 800E1FE0 000DD900  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -430,6 +431,7 @@ lbl_800E2288:
 /* 800E22B8 000DDBD8  38 21 00 20 */	addi r1, r1, 0x20
 /* 800E22BC 000DDBDC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_800E22C0
 func_800E22C0:
 /* 800E22C0 000DDBE0  3C 60 80 35 */	lis r3, lbl_8034CD80@ha
@@ -437,6 +439,7 @@ func_800E22C0:
 /* 800E22C8 000DDBE8  80 63 00 4C */	lwz r3, 0x4c(r3)
 /* 800E22CC 000DDBEC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_800E22D0
 func_800E22D0:
 /* 800E22D0 000DDBF0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -515,10 +518,8 @@ lbl_800E23D8:
 /* 800E23E8 000DDD08  7C 08 03 A6 */	mtlr r0
 /* 800E23EC 000DDD0C  38 21 00 20 */	addi r1, r1, 0x20
 /* 800E23F0 000DDD10  4E 80 00 20 */	blr 
-/* 800E23F4 000DDD14  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800E23F8 000DDD18  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800E23FC 000DDD1C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800E2400
 func_800E2400:
 /* 800E2400 000DDD20  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -553,9 +554,8 @@ lbl_800E2448:
 /* 800E246C 000DDD8C  7C 08 03 A6 */	mtlr r0
 /* 800E2470 000DDD90  38 21 00 10 */	addi r1, r1, 0x10
 /* 800E2474 000DDD94  4E 80 00 20 */	blr 
-/* 800E2478 000DDD98  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800E247C 000DDD9C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800E2480
 func_800E2480:
 /* 800E2480 000DDDA0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -601,8 +601,8 @@ lbl_800E2504:
 /* 800E2510 000DDE30  7C 08 03 A6 */	mtlr r0
 /* 800E2514 000DDE34  38 21 00 10 */	addi r1, r1, 0x10
 /* 800E2518 000DDE38  4E 80 00 20 */	blr 
-/* 800E251C 000DDE3C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800E2520
 func_800E2520:
 /* 800E2520 000DDE40  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -679,8 +679,8 @@ lbl_800E2624:
 /* 800E2630 000DDF50  7C 08 03 A6 */	mtlr r0
 /* 800E2634 000DDF54  38 21 00 20 */	addi r1, r1, 0x20
 /* 800E2638 000DDF58  4E 80 00 20 */	blr 
-/* 800E263C 000DDF5C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800E2640
 func_800E2640:
 /* 800E2640 000DDF60  94 21 FF E0 */	stwu r1, -0x20(r1)

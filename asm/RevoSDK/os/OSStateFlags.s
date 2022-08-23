@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x800D8FF0 - 0x801D3284
 
+.balign 16, 0
 .global func_800E5350
 func_800E5350:
 /* 800E5350 000E0C70  94 21 FF 60 */	stwu r1, -0xa0(r1)
@@ -65,10 +66,8 @@ lbl_800E541C:
 /* 800E5428 000E0D48  7C 08 03 A6 */	mtlr r0
 /* 800E542C 000E0D4C  38 21 00 A0 */	addi r1, r1, 0xa0
 /* 800E5430 000E0D50  4E 80 00 20 */	blr 
-/* 800E5434 000E0D54  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800E5438 000E0D58  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800E543C 000E0D5C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800E5440
 func_800E5440:
 /* 800E5440 000E0D60  94 21 FF 50 */	stwu r1, -0xb0(r1)
@@ -149,8 +148,6 @@ lbl_800E5548:
 /* 800E555C 000E0E7C  7C 08 03 A6 */	mtlr r0
 /* 800E5560 000E0E80  38 21 00 B0 */	addi r1, r1, 0xb0
 /* 800E5564 000E0E84  4E 80 00 20 */	blr 
-/* 800E5568 000E0E88  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800E556C 000E0E8C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
 
 .section .data, "wa"  # 0x802F17E0 - 0x80315F30
@@ -161,6 +158,7 @@ lbl_802FEF48:
 
 	# ROM: 0x2FB048
 	.asciz "/title/00000001/00000002/data/state.dat"
+	.balign 4
 
 
 .section .bss, "wa" # 0x8034C9C0 - 0x803D5C28

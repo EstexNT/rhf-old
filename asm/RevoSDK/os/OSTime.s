@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x800D8FF0 - 0x801D3284
 
+.balign 16, 0
 .global func_800E3E60
 func_800E3E60:
 /* 800E3E60 000DF780  7C 6D 42 E6 */	mftbu r3
@@ -10,16 +11,14 @@ func_800E3E60:
 /* 800E3E6C 000DF78C  7C 03 28 00 */	cmpw r3, r5
 /* 800E3E70 000DF790  40 82 FF F0 */	bne func_800E3E60
 /* 800E3E74 000DF794  4E 80 00 20 */	blr 
-/* 800E3E78 000DF798  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800E3E7C 000DF79C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800E3E80
 func_800E3E80:
 /* 800E3E80 000DF7A0  7C 6C 42 E6 */	mftb r3, 0x10c
 /* 800E3E84 000DF7A4  4E 80 00 20 */	blr 
-/* 800E3E88 000DF7A8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800E3E8C 000DF7AC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800E3E90
 func_800E3E90:
 /* 800E3E90 000DF7B0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -47,10 +46,8 @@ func_800E3E90:
 /* 800E3EE8 000DF808  7C 08 03 A6 */	mtlr r0
 /* 800E3EEC 000DF80C  38 21 00 20 */	addi r1, r1, 0x20
 /* 800E3EF0 000DF810  4E 80 00 20 */	blr 
-/* 800E3EF4 000DF814  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800E3EF8 000DF818  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800E3EFC 000DF81C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800E3F00
 func_800E3F00:
 /* 800E3F00 000DF820  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -75,9 +72,8 @@ func_800E3F00:
 /* 800E3F4C 000DF86C  7C 08 03 A6 */	mtlr r0
 /* 800E3F50 000DF870  38 21 00 10 */	addi r1, r1, 0x10
 /* 800E3F54 000DF874  4E 80 00 20 */	blr 
-/* 800E3F58 000DF878  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800E3F5C 000DF87C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800E3F60
 func_800E3F60:
 /* 800E3F60 000DF880  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -294,7 +290,6 @@ lbl_800E41E8:
 /* 800E4280 000DFBA0  7C 08 03 A6 */	mtlr r0
 /* 800E4284 000DFBA4  38 21 00 20 */	addi r1, r1, 0x20
 /* 800E4288 000DFBA8  4E 80 00 20 */	blr 
-/* 800E428C 000DFBAC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
 
 .section .data, "wa"  # 0x802F17E0 - 0x80315F30

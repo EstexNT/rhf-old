@@ -2,6 +2,8 @@
 
 .section .text, "ax"  # 0x800D8FF0 - 0x801D3284
 
+.balign 16, 0
+.global lbl_800E2750
 lbl_800E2750:
 /* 800E2750 000DE070  7D 30 FA A6 */	mfspr r9, 0x3f0
 /* 800E2754 000DE074  61 2A 00 08 */	ori r10, r9, 8
@@ -13,6 +15,7 @@ lbl_800E2750:
 lbl_800E276C:
 /* 800E276C 000DE08C  60 00 00 00 */	nop 
 
+.balign 16, 0
 .global func_800E2770
 func_800E2770:
 /* 800E2770 000DE090  94 21 FF F0 */	stwu r1, -0x10(r1)
