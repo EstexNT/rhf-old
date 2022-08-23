@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x800D8FF0 - 0x801D3284
 
+.balign 16, 0
 .global func_800DEF30
 func_800DEF30:
 /* 800DEF30 000DA850  28 03 00 01 */	cmplwi r3, 1
@@ -92,9 +93,8 @@ lbl_800DF044:
 lbl_800DF060:
 /* 800DF060 000DA980  38 60 00 00 */	li r3, 0
 /* 800DF064 000DA984  4E 80 00 20 */	blr 
-/* 800DF068 000DA988  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800DF06C 000DA98C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800DF070
 func_800DF070:
 /* 800DF070 000DA990  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -213,9 +213,8 @@ lbl_800DF1F0:
 /* 800DF20C 000DAB2C  7C 08 03 A6 */	mtlr r0
 /* 800DF210 000DAB30  38 21 00 20 */	addi r1, r1, 0x20
 /* 800DF214 000DAB34  4E 80 00 20 */	blr 
-/* 800DF218 000DAB38  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800DF21C 000DAB3C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800DF220
 func_800DF220:
 /* 800DF220 000DAB40  A0 0D 8C 08 */	lhz r0, lbl_8031FAC8-_SDA_BASE_(r13)
@@ -253,9 +252,8 @@ lbl_800DF26C:
 lbl_800DF290:
 /* 800DF290 000DABB0  7C 03 03 78 */	mr r3, r0
 /* 800DF294 000DABB4  4E 80 00 20 */	blr 
-/* 800DF298 000DABB8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800DF29C 000DABBC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800DF2A0
 func_800DF2A0:
 /* 800DF2A0 000DABC0  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -470,6 +468,7 @@ lbl_800DF598:
 /* 800DF5A8 000DAEC8  38 21 00 30 */	addi r1, r1, 0x30
 /* 800DF5AC 000DAECC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_800DF5B0
 func_800DF5B0:
 /* 800DF5B0 000DAED0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -551,8 +550,9 @@ lbl_800DF6AC:
 /* 800DF6BC 000DAFDC  7C 08 03 A6 */	mtlr r0
 /* 800DF6C0 000DAFE0  38 21 00 10 */	addi r1, r1, 0x10
 /* 800DF6C4 000DAFE4  4E 80 00 20 */	blr 
-/* 800DF6C8 000DAFE8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800DF6CC 000DAFEC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+
+.balign 16, 0
+.global lbl_800DF6D0
 lbl_800DF6D0:
 /* 800DF6D0 000DAFF0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800DF6D4 000DAFF4  7C 08 02 A6 */	mflr r0
@@ -623,8 +623,9 @@ lbl_800DF79C:
 /* 800DF7BC 000DB0DC  7C 08 03 A6 */	mtlr r0
 /* 800DF7C0 000DB0E0  38 21 00 10 */	addi r1, r1, 0x10
 /* 800DF7C4 000DB0E4  4E 80 00 20 */	blr 
-/* 800DF7C8 000DB0E8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800DF7CC 000DB0EC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+
+.balign 16, 0
+.global lbl_800DF7D0
 lbl_800DF7D0:
 /* 800DF7D0 000DB0F0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 800DF7D4 000DB0F4  7C 08 02 A6 */	mflr r0
@@ -747,10 +748,8 @@ lbl_800DF954:
 /* 800DF978 000DB298  7C 08 03 A6 */	mtlr r0
 /* 800DF97C 000DB29C  38 21 00 30 */	addi r1, r1, 0x30
 /* 800DF980 000DB2A0  4E 80 00 20 */	blr 
-/* 800DF984 000DB2A4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800DF988 000DB2A8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800DF98C 000DB2AC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800DF990
 func_800DF990:
 /* 800DF990 000DB2B0  94 21 FF B0 */	stwu r1, -0x50(r1)
@@ -925,9 +924,8 @@ lbl_800DFC00:
 /* 800DFC0C 000DB52C  7C 08 03 A6 */	mtlr r0
 /* 800DFC10 000DB530  38 21 00 50 */	addi r1, r1, 0x50
 /* 800DFC14 000DB534  4E 80 00 20 */	blr 
-/* 800DFC18 000DB538  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800DFC1C 000DB53C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800DFC20
 func_800DFC20:
 /* 800DFC20 000DB540  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1017,9 +1015,8 @@ lbl_800DFD48:
 /* 800DFD5C 000DB67C  7C 08 03 A6 */	mtlr r0
 /* 800DFD60 000DB680  38 21 00 20 */	addi r1, r1, 0x20
 /* 800DFD64 000DB684  4E 80 00 20 */	blr 
-/* 800DFD68 000DB688  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800DFD6C 000DB68C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800DFD70
 func_800DFD70:
 /* 800DFD70 000DB690  94 21 FF E0 */	stwu r1, -0x20(r1)

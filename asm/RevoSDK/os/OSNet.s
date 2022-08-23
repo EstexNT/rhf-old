@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x800D8FF0 - 0x801D3284
 
+.balign 16, 0
 .global func_800E5570
 func_800E5570:
 /* 800E5570 000E0E90  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -53,10 +54,8 @@ lbl_800E5610:
 /* 800E5618 000E0F38  7C 08 03 A6 */	mtlr r0
 /* 800E561C 000E0F3C  38 21 00 20 */	addi r1, r1, 0x20
 /* 800E5620 000E0F40  4E 80 00 20 */	blr 
-/* 800E5624 000E0F44  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800E5628 000E0F48  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800E562C 000E0F4C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800E5630
 func_800E5630:
 /* 800E5630 000E0F50  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -110,9 +109,8 @@ lbl_800E56D0:
 /* 800E56DC 000E0FFC  7C 08 03 A6 */	mtlr r0
 /* 800E56E0 000E1000  38 21 00 10 */	addi r1, r1, 0x10
 /* 800E56E4 000E1004  4E 80 00 20 */	blr 
-/* 800E56E8 000E1008  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800E56EC 000E100C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800E56F0
 func_800E56F0:
 /* 800E56F0 000E1010  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -157,10 +155,8 @@ lbl_800E576C:
 /* 800E5778 000E1098  7C 08 03 A6 */	mtlr r0
 /* 800E577C 000E109C  38 21 00 10 */	addi r1, r1, 0x10
 /* 800E5780 000E10A0  4E 80 00 20 */	blr 
-/* 800E5784 000E10A4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800E5788 000E10A8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800E578C 000E10AC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800E5790
 func_800E5790:
 /* 800E5790 000E10B0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -241,6 +237,7 @@ lbl_800E5878:
 /* 800E5888 000E11A8  38 21 00 10 */	addi r1, r1, 0x10
 /* 800E588C 000E11AC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_800E5890
 func_800E5890:
 /* 800E5890 000E11B0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -272,7 +269,9 @@ lbl_800E58EC:
 /* 800E58F0 000E1210  7C 08 03 A6 */	mtlr r0
 /* 800E58F4 000E1214  38 21 00 10 */	addi r1, r1, 0x10
 /* 800E58F8 000E1218  4E 80 00 20 */	blr 
-/* 800E58FC 000E121C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+
+.balign 16, 0
+.global lbl_800E5900
 lbl_800E5900:
 /* 800E5900 000E1220  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800E5904 000E1224  7C 08 02 A6 */	mflr r0
@@ -327,9 +326,8 @@ lbl_800E59A8:
 /* 800E59AC 000E12CC  7C 08 03 A6 */	mtlr r0
 /* 800E59B0 000E12D0  38 21 00 10 */	addi r1, r1, 0x10
 /* 800E59B4 000E12D4  4E 80 00 20 */	blr 
-/* 800E59B8 000E12D8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800E59BC 000E12DC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800E59C0
 func_800E59C0:
 /* 800E59C0 000E12E0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -418,9 +416,9 @@ lbl_800E5AC4:
 /* 800E5AD8 000E13F8  7C 08 03 A6 */	mtlr r0
 /* 800E5ADC 000E13FC  38 21 00 20 */	addi r1, r1, 0x20
 /* 800E5AE0 000E1400  4E 80 00 20 */	blr 
-/* 800E5AE4 000E1404  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800E5AE8 000E1408  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800E5AEC 000E140C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+
+.balign 16, 0
+.global lbl_800E5AF0
 lbl_800E5AF0:
 /* 800E5AF0 000E1410  2C 04 00 00 */	cmpwi r4, 0
 /* 800E5AF4 000E1414  41 82 00 08 */	beq lbl_800E5AFC
@@ -430,7 +428,6 @@ lbl_800E5AFC:
 /* 800E5B00 000E1420  90 0D 98 5C */	stw r0, lbl_8032071C-_SDA_BASE_(r13)
 /* 800E5B04 000E1424  38 60 00 00 */	li r3, 0
 /* 800E5B08 000E1428  4E 80 00 20 */	blr 
-/* 800E5B0C 000E142C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
 
 .section .data, "wa"  # 0x802F17E0 - 0x80315F30
@@ -456,6 +453,7 @@ lbl_802FF030:
 
 	# ROM: 0x2FB130
 	.asciz "/dev/net/kd/request"
+	.balign 4
 	.asciz "NWC24SuspendScheduler"
 	.balign 4
 	.asciz "NWC24ResumeScheduler"

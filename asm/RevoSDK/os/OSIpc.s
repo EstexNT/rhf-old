@@ -2,20 +2,19 @@
 
 .section .text, "ax"  # 0x800D8FF0 - 0x801D3284
 
+.balign 16, 0
 .global func_800E44E0
 func_800E44E0:
 /* 800E44E0 000DFE00  80 6D 98 08 */	lwz r3, lbl_803206C8-_SDA_BASE_(r13)
 /* 800E44E4 000DFE04  4E 80 00 20 */	blr 
-/* 800E44E8 000DFE08  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800E44EC 000DFE0C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800E44F0
 func_800E44F0:
 /* 800E44F0 000DFE10  80 6D 8C 18 */	lwz r3, lbl_8031FAD8-_SDA_BASE_(r13)
 /* 800E44F4 000DFE14  4E 80 00 20 */	blr 
-/* 800E44F8 000DFE18  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800E44FC 000DFE1C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800E4500
 func_800E4500:
 /* 800E4500 000DFE20  3C 60 80 00 */	lis r3, 0x80003130@ha

@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x800D8FF0 - 0x801D3284
 
+.balign 16, 0
 .global func_800E0FC0
 func_800E0FC0:
 /* 800E0FC0 000DC8E0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -18,9 +19,8 @@ func_800E0FC0:
 /* 800E0FEC 000DC90C  7C 08 03 A6 */	mtlr r0
 /* 800E0FF0 000DC910  38 21 00 10 */	addi r1, r1, 0x10
 /* 800E0FF4 000DC914  4E 80 00 20 */	blr 
-/* 800E0FF8 000DC918  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800E0FFC 000DC91C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800E1000
 func_800E1000:
 /* 800E1000 000DC920  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -84,8 +84,8 @@ lbl_800E10B4:
 /* 800E10D0 000DC9F0  7C 08 03 A6 */	mtlr r0
 /* 800E10D4 000DC9F4  38 21 00 20 */	addi r1, r1, 0x20
 /* 800E10D8 000DC9F8  4E 80 00 20 */	blr 
-/* 800E10DC 000DC9FC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800E10E0
 func_800E10E0:
 /* 800E10E0 000DCA00  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -144,9 +144,8 @@ lbl_800E1184:
 /* 800E119C 000DCABC  7C 08 03 A6 */	mtlr r0
 /* 800E11A0 000DCAC0  38 21 00 20 */	addi r1, r1, 0x20
 /* 800E11A4 000DCAC4  4E 80 00 20 */	blr 
-/* 800E11A8 000DCAC8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800E11AC 000DCACC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800E11B0
 func_800E11B0:
 /* 800E11B0 000DCAD0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -180,8 +179,8 @@ lbl_800E11F8:
 /* 800E1210 000DCB30  7C 08 03 A6 */	mtlr r0
 /* 800E1214 000DCB34  38 21 00 10 */	addi r1, r1, 0x10
 /* 800E1218 000DCB38  4E 80 00 20 */	blr 
-/* 800E121C 000DCB3C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800E1220
 func_800E1220:
 /* 800E1220 000DCB40  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -236,4 +235,3 @@ lbl_800E12B4:
 /* 800E12D0 000DCBF0  7C 08 03 A6 */	mtlr r0
 /* 800E12D4 000DCBF4  38 21 00 20 */	addi r1, r1, 0x20
 /* 800E12D8 000DCBF8  4E 80 00 20 */	blr 
-/* 800E12DC 000DCBFC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */

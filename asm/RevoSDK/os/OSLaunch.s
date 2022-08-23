@@ -144,6 +144,3 @@ lbl_800E67B8:
 /* 800E683C 000E215C  60 00 00 00 */	nop 
 lbl_800E6840:
 /* 800E6840 000E2160  48 00 00 00 */	b lbl_800E6840
-/* 800E6844 000E2164  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800E6848 000E2168  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800E684C 000E216C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */

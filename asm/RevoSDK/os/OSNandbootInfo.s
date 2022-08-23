@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x800D8FF0 - 0x801D3284
 
+.balign 16, 0
 .global func_800E5B10
 func_800E5B10:
 /* 800E5B10 000E1430  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -54,6 +55,7 @@ lbl_800E5BB0:
 /* 800E5BB8 000E14D8  38 21 00 10 */	addi r1, r1, 0x10
 /* 800E5BBC 000E14DC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_800E5BC0
 func_800E5BC0:
 /* 800E5BC0 000E14E0  94 21 FF 60 */	stwu r1, -0xa0(r1)
@@ -146,8 +148,6 @@ lbl_800E5D04:
 /* 800E5D0C 000E162C  7C 08 03 A6 */	mtlr r0
 /* 800E5D10 000E1630  38 21 00 A0 */	addi r1, r1, 0xa0
 /* 800E5D14 000E1634  4E 80 00 20 */	blr 
-/* 800E5D18 000E1638  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800E5D1C 000E163C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
 
 .section .data, "wa"  # 0x802F17E0 - 0x80315F30

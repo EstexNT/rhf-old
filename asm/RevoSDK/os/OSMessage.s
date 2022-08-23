@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x800D8FF0 - 0x801D3284
 
+.balign 16, 0
 .global func_800E0610
 func_800E0610:
 /* 800E0610 000DBF30  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -29,6 +30,7 @@ func_800E0610:
 /* 800E0668 000DBF88  38 21 00 20 */	addi r1, r1, 0x20
 /* 800E066C 000DBF8C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_800E0670
 func_800E0670:
 /* 800E0670 000DBF90  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -85,9 +87,8 @@ lbl_800E0718:
 /* 800E072C 000DC04C  7C 08 03 A6 */	mtlr r0
 /* 800E0730 000DC050  38 21 00 20 */	addi r1, r1, 0x20
 /* 800E0734 000DC054  4E 80 00 20 */	blr 
-/* 800E0738 000DC058  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800E073C 000DC05C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800E0740
 func_800E0740:
 /* 800E0740 000DC060  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -150,4 +151,3 @@ lbl_800E07FC:
 /* 800E0810 000DC130  7C 08 03 A6 */	mtlr r0
 /* 800E0814 000DC134  38 21 00 20 */	addi r1, r1, 0x20
 /* 800E0818 000DC138  4E 80 00 20 */	blr 
-/* 800E081C 000DC13C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
