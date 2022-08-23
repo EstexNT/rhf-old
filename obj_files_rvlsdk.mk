@@ -36,3 +36,9 @@ RVL_SDK_OS_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/os/OSCrc.o \
 	$(BUILD_DIR)/asm/RevoSDK/os/OSLaunch.o \
 	$(BUILD_DIR)/asm/RevoSDK/os/__ppc_eabi_init.o 
+
+RVL_SDK_MTX_O_FILES :=\
+	$(BUILD_DIR)/asm/RevoSDK/mtx/mtx.o \
+	$(BUILD_DIR)/asm/RevoSDK/mtx/mtxvec.o \
+	$(BUILD_DIR)/asm/RevoSDK/mtx/mtx44.o \
+	$(BUILD_DIR)/asm/RevoSDK/mtx/vec.o 
