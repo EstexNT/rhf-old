@@ -43,8 +43,9 @@ endif
 include obj_files.mk
 
 O_FILES := $(INIT_O_FILES) $(EXTAB_O_FILES) $(EXTABINDEX_O_FILES) $(GAME_O_FILES) \
-           $(RVL_SDK_BASE_O_FILES) $(RVL_SDK_OS_O_FILES) $(RVL_SDK_MTX_O_FILES) $(LIB_O_FILES) \
-           $(GAME_UTIL_FILES) $(CTORS_O_FILES) $(DTORS_O_FILES) 
+           $(RVL_SDK_BASE_O_FILES) $(RVL_SDK_OS_O_FILES) $(RVL_SDK_MTX_O_FILES) \
+		   $(RVL_SDK_DVD_O_FILES) $(LIB_O_FILES) $(GAME_UTIL_FILES) $(CTORS_O_FILES) \
+           $(DTORS_O_FILES) 
 
 #-------------------------------------------------------------------------------
 # Tools
