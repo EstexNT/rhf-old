@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x800D8FF0 - 0x801D3284
 
+.balign 16, 0
 .global func_800EC900
 func_800EC900:
 /* 800EC900 000E8220  3C C0 80 35 */	lis r6, lbl_80352870@ha
@@ -18,9 +19,8 @@ func_800EC900:
 /* 800EC92C 000E824C  90 63 00 00 */	stw r3, 0(r3)
 /* 800EC930 000E8250  90 63 00 04 */	stw r3, 4(r3)
 /* 800EC934 000E8254  4E 80 00 20 */	blr 
-/* 800EC938 000E8258  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800EC93C 000E825C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800EC940
 func_800EC940:
 /* 800EC940 000E8260  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -49,9 +49,8 @@ func_800EC940:
 /* 800EC99C 000E82BC  7C 08 03 A6 */	mtlr r0
 /* 800EC9A0 000E82C0  38 21 00 10 */	addi r1, r1, 0x10
 /* 800EC9A4 000E82C4  4E 80 00 20 */	blr 
-/* 800EC9A8 000E82C8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800EC9AC 000E82CC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800EC9B0
 func_800EC9B0:
 /* 800EC9B0 000E82D0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -98,6 +97,7 @@ lbl_800ECA3C:
 /* 800ECA48 000E8368  38 21 00 10 */	addi r1, r1, 0x10
 /* 800ECA4C 000E836C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_800ECA50
 func_800ECA50:
 /* 800ECA50 000E8370  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -125,9 +125,8 @@ lbl_800ECA98:
 /* 800ECA9C 000E83BC  7C 08 03 A6 */	mtlr r0
 /* 800ECAA0 000E83C0  38 21 00 10 */	addi r1, r1, 0x10
 /* 800ECAA4 000E83C4  4E 80 00 20 */	blr 
-/* 800ECAA8 000E83C8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800ECAAC 000E83CC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800ECAB0
 func_800ECAB0:
 /* 800ECAB0 000E83D0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -158,10 +157,8 @@ lbl_800ECB00:
 /* 800ECB08 000E8428  7C 08 03 A6 */	mtlr r0
 /* 800ECB0C 000E842C  38 21 00 10 */	addi r1, r1, 0x10
 /* 800ECB10 000E8430  4E 80 00 20 */	blr 
-/* 800ECB14 000E8434  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800ECB18 000E8438  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800ECB1C 000E843C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800ECB20
 func_800ECB20:
 /* 800ECB20 000E8440  94 21 FF F0 */	stwu r1, -0x10(r1)

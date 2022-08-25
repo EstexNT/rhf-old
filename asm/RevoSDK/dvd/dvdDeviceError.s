@@ -2,12 +2,15 @@
 
 .section .text, "ax"  # 0x800D8FF0 - 0x801D3284
 
+.balign 16, 0
+.global lbl_800ED800
 lbl_800ED800:
 /* 800ED800 000E9120  90 6D 99 50 */	stw r3, lbl_80320810-_SDA_BASE_(r13)
 /* 800ED804 000E9124  38 00 00 01 */	li r0, 1
 /* 800ED808 000E9128  90 0D 8C 70 */	stw r0, lbl_8031FB30-_SDA_BASE_(r13)
 /* 800ED80C 000E912C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_800ED810
 func_800ED810:
 /* 800ED810 000E9130  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -191,7 +194,6 @@ lbl_800EDA70:
 /* 800EDA80 000E93A0  7C 08 03 A6 */	mtlr r0
 /* 800EDA84 000E93A4  38 21 00 30 */	addi r1, r1, 0x30
 /* 800EDA88 000E93A8  4E 80 00 20 */	blr 
-/* 800EDA8C 000E93AC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
 
 .section .rodata, "wa"  # 0x802DDDD0 - 0x802E4A88
@@ -201,19 +203,21 @@ lbl_800EDA70:
 lbl_802DDE48:
 
 	# ROM: 0x2D9F48
-	.4byte 0x802FFEA8  ;# ptr
-	.4byte 0x802FFEE4  ;# ptr
-	.4byte 0x802FFF1C  ;# ptr
-	.4byte 0x802FFF5C  ;# ptr
-	.4byte 0x802FFF98  ;# ptr
-	.4byte 0x802FFFD4  ;# ptr
-	.4byte 0x80300010  ;# ptr
+	.4byte lbl_802FFEA8
+	.4byte lbl_802FFEE4
+	.4byte lbl_802FFF1C
+	.4byte lbl_802FFF5C
+	.4byte lbl_802FFF98
+	.4byte lbl_802FFFD4
+	.4byte lbl_80300010
 	.4byte 0
 
 
 .section .data, "wa"  # 0x802F17E0 - 0x80315F30
 
+.global lbl_802FFEA8
 lbl_802FFEA8:
+	#"\n\n\nエラーコード００１。\n不明なデバイスが見つかりました。"
 	.4byte 0x0A0A0A83
 	.4byte 0x47838981
 	.4byte 0x5B835281
@@ -229,8 +233,13 @@ lbl_802FFEA8:
 	.4byte 0x82DC82B5
 	.4byte 0x82BD8142
 	.4byte 0
+.global lbl_802FFEE4
+lbl_802FFEE4:
 	.asciz "\n\n\nError #001,\nunauthorized device has been detected."
 	.balign 4
+.global lbl_802FFF1C
+lbl_802FFF1C:
+	#"\n\n\nFehler #001:\nEs wurde eine unzulässige Komponente\nentdeckt."
 	.4byte 0x0A0A0A46
 	.4byte 0x65686C65
 	.4byte 0x72202330
@@ -242,6 +251,9 @@ lbl_802FFEA8:
 	.4byte 0x7A756CE4
 	.asciz "ssige Komponente\nentdeckt."
 	.balign 4
+.global lbl_802FFF5C
+lbl_802FFF5C:
+	#"\n\n\nErreur 001:\nun dispositif non autorisé a été détecté."
 	.4byte 0x0A0A0A45
 	.4byte 0x72726575
 	.4byte 0x72203030
@@ -257,9 +269,16 @@ lbl_802FFEA8:
 	.4byte 0x64E97465
 	.4byte 0x6374E92E
 	.4byte 0
+.global lbl_802FFF98
+lbl_802FFF98:
 	.asciz "\n\n\nError 001:\nSe ha detectado un dispositivo no\nautorizado."
+	.balign 4
+.global lbl_802FFFD4
+lbl_802FFFD4:
 	.asciz "\n\n\nErrore #001:\nrilevato un dispositivo non autorizzato."
 	.balign 4
+.global lbl_80300010
+lbl_80300010:
 	.asciz "\n\n\nFout #001:\nongeoorloofd onderdeel gevonden."
 	.balign 4
 

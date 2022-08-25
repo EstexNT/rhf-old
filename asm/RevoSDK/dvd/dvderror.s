@@ -2,6 +2,8 @@
 
 .section .text, "ax"  # 0x800D8FF0 - 0x801D3284
 
+.balign 16, 0
+.global lbl_800ECB80
 lbl_800ECB80:
 /* 800ECB80 000E84A0  81 8D 99 40 */	lwz r12, lbl_80320800-_SDA_BASE_(r13)
 /* 800ECB84 000E84A4  2C 0C 00 00 */	cmpwi r12, 0
@@ -14,7 +16,9 @@ lbl_800ECB80:
 /* 800ECBA0 000E84C0  7D 89 03 A6 */	mtctr r12
 /* 800ECBA4 000E84C4  4E 80 04 20 */	bctr 
 /* 800ECBA8 000E84C8  4E 80 00 20 */	blr 
-/* 800ECBAC 000E84CC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+
+.balign 16, 0
+.global lbl_800ECBB0
 lbl_800ECBB0:
 /* 800ECBB0 000E84D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800ECBB4 000E84D4  7C 08 02 A6 */	mflr r0
@@ -40,7 +44,9 @@ lbl_800ECBFC:
 /* 800ECC00 000E8520  7C 08 03 A6 */	mtlr r0
 /* 800ECC04 000E8524  38 21 00 10 */	addi r1, r1, 0x10
 /* 800ECC08 000E8528  4E 80 00 20 */	blr 
-/* 800ECC0C 000E852C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+
+.balign 16, 0
+.global lbl_800ECC10
 lbl_800ECC10:
 /* 800ECC10 000E8530  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800ECC14 000E8534  7C 08 02 A6 */	mflr r0
@@ -108,7 +114,9 @@ lbl_800ECCF8:
 /* 800ECD00 000E8620  7C 08 03 A6 */	mtlr r0
 /* 800ECD04 000E8624  38 21 00 10 */	addi r1, r1, 0x10
 /* 800ECD08 000E8628  4E 80 00 20 */	blr 
-/* 800ECD0C 000E862C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+
+.balign 16, 0
+.global lbl_800ECD10
 lbl_800ECD10:
 /* 800ECD10 000E8630  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800ECD14 000E8634  7C 08 02 A6 */	mflr r0
@@ -199,9 +207,9 @@ lbl_800ECE50:
 /* 800ECE58 000E8778  7C 08 03 A6 */	mtlr r0
 /* 800ECE5C 000E877C  38 21 00 10 */	addi r1, r1, 0x10
 /* 800ECE60 000E8780  4E 80 00 20 */	blr 
-/* 800ECE64 000E8784  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800ECE68 000E8788  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800ECE6C 000E878C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+
+.balign 16, 0
+.global lbl_800ECE70
 lbl_800ECE70:
 /* 800ECE70 000E8790  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800ECE74 000E8794  7C 08 02 A6 */	mflr r0
@@ -252,7 +260,9 @@ lbl_800ECF1C:
 /* 800ECF20 000E8840  7C 08 03 A6 */	mtlr r0
 /* 800ECF24 000E8844  38 21 00 10 */	addi r1, r1, 0x10
 /* 800ECF28 000E8848  4E 80 00 20 */	blr 
-/* 800ECF2C 000E884C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+
+.balign 16, 0
+.global lbl_800ECF30
 lbl_800ECF30:
 /* 800ECF30 000E8850  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800ECF34 000E8854  7C 08 02 A6 */	mflr r0
@@ -314,8 +324,9 @@ lbl_800ED004:
 /* 800ED00C 000E892C  7C 08 03 A6 */	mtlr r0
 /* 800ED010 000E8930  38 21 00 10 */	addi r1, r1, 0x10
 /* 800ED014 000E8934  4E 80 00 20 */	blr 
-/* 800ED018 000E8938  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800ED01C 000E893C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+
+.balign 16, 0
+.global lbl_800ED020
 lbl_800ED020:
 /* 800ED020 000E8940  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800ED024 000E8944  7C 08 02 A6 */	mflr r0
@@ -359,6 +370,9 @@ lbl_800ED0B0:
 /* 800ED0B4 000E89D4  7C 08 03 A6 */	mtlr r0
 /* 800ED0B8 000E89D8  38 21 00 10 */	addi r1, r1, 0x10
 /* 800ED0BC 000E89DC  4E 80 00 20 */	blr 
+
+.balign 16, 0
+.global lbl_800ED0C0
 lbl_800ED0C0:
 /* 800ED0C0 000E89E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800ED0C4 000E89E4  7C 08 02 A6 */	mflr r0
@@ -426,6 +440,9 @@ lbl_800ED1AC:
 /* 800ED1B4 000E8AD4  7C 08 03 A6 */	mtlr r0
 /* 800ED1B8 000E8AD8  38 21 00 10 */	addi r1, r1, 0x10
 /* 800ED1BC 000E8ADC  4E 80 00 20 */	blr 
+
+.balign 16, 0
+.global lbl_800ED1C0
 lbl_800ED1C0:
 /* 800ED1C0 000E8AE0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800ED1C4 000E8AE4  7C 08 02 A6 */	mflr r0
@@ -501,7 +518,9 @@ lbl_800ED2C8:
 /* 800ED2D0 000E8BF0  7C 08 03 A6 */	mtlr r0
 /* 800ED2D4 000E8BF4  38 21 00 10 */	addi r1, r1, 0x10
 /* 800ED2D8 000E8BF8  4E 80 00 20 */	blr 
-/* 800ED2DC 000E8BFC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+
+.balign 16, 0
+.global lbl_800ED2E0
 lbl_800ED2E0:
 /* 800ED2E0 000E8C00  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800ED2E4 000E8C04  7C 08 02 A6 */	mflr r0
@@ -546,6 +565,9 @@ lbl_800ED370:
 /* 800ED374 000E8C94  7C 08 03 A6 */	mtlr r0
 /* 800ED378 000E8C98  38 21 00 10 */	addi r1, r1, 0x10
 /* 800ED37C 000E8C9C  4E 80 00 20 */	blr 
+
+.balign 16, 0
+.global lbl_800ED380
 lbl_800ED380:
 /* 800ED380 000E8CA0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800ED384 000E8CA4  7C 08 02 A6 */	mflr r0
@@ -587,9 +609,9 @@ lbl_800ED404:
 /* 800ED408 000E8D28  7C 08 03 A6 */	mtlr r0
 /* 800ED40C 000E8D2C  38 21 00 10 */	addi r1, r1, 0x10
 /* 800ED410 000E8D30  4E 80 00 20 */	blr 
-/* 800ED414 000E8D34  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800ED418 000E8D38  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800ED41C 000E8D3C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+
+.balign 16, 0
+.global lbl_800ED420
 lbl_800ED420:
 /* 800ED420 000E8D40  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800ED424 000E8D44  7C 08 02 A6 */	mflr r0
@@ -630,6 +652,9 @@ lbl_800ED4A0:
 /* 800ED4A4 000E8DC4  7C 08 03 A6 */	mtlr r0
 /* 800ED4A8 000E8DC8  38 21 00 10 */	addi r1, r1, 0x10
 /* 800ED4AC 000E8DCC  4E 80 00 20 */	blr 
+
+.balign 16, 0
+.global lbl_800ED4B0
 lbl_800ED4B0:
 /* 800ED4B0 000E8DD0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800ED4B4 000E8DD4  7C 08 02 A6 */	mflr r0
@@ -664,9 +689,8 @@ lbl_800ED518:
 /* 800ED51C 000E8E3C  7C 08 03 A6 */	mtlr r0
 /* 800ED520 000E8E40  38 21 00 10 */	addi r1, r1, 0x10
 /* 800ED524 000E8E44  4E 80 00 20 */	blr 
-/* 800ED528 000E8E48  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800ED52C 000E8E4C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800ED530
 func_800ED530:
 /* 800ED530 000E8E50  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -695,8 +719,6 @@ func_800ED530:
 /* 800ED58C 000E8EAC  7C 08 03 A6 */	mtlr r0
 /* 800ED590 000E8EB0  38 21 00 10 */	addi r1, r1, 0x10
 /* 800ED594 000E8EB4  4E 80 00 20 */	blr 
-/* 800ED598 000E8EB8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800ED59C 000E8EBC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
 
 .section .data, "wa"  # 0x802F17E0 - 0x80315F30
@@ -707,6 +729,7 @@ lbl_802FF6B0:
 
 	# ROM: 0x2FB7B0
 	.asciz "/shared2/test2/dvderror.dat"
+	.balign 4
 
 
 .global lbl_802FF6CC
@@ -742,4 +765,7 @@ lbl_8035292C:
 	.skip 0xD4
 .global lbl_80352A00
 lbl_80352A00:
-	.skip 0x100
+	.skip 0x80
+.global lbl_80352A80
+lbl_80352A80:
+	.skip 0x80

@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x800D8FF0 - 0x801D3284
 
+.balign 16, 0
 .global func_800ED690
 func_800ED690:
 /* 800ED690 000E8FB0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -62,8 +63,8 @@ lbl_800ED72C:
 /* 800ED750 000E9070  7C 08 03 A6 */	mtlr r0
 /* 800ED754 000E9074  38 21 00 20 */	addi r1, r1, 0x20
 /* 800ED758 000E9078  4E 80 00 20 */	blr 
-/* 800ED75C 000E907C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800ED760
 func_800ED760:
 /* 800ED760 000E9080  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -90,8 +91,8 @@ lbl_800ED79C:
 /* 800ED7B0 000E90D0  7C 08 03 A6 */	mtlr r0
 /* 800ED7B4 000E90D4  38 21 00 10 */	addi r1, r1, 0x10
 /* 800ED7B8 000E90D8  4E 80 00 20 */	blr 
-/* 800ED7BC 000E90DC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800ED7C0
 func_800ED7C0:
 /* 800ED7C0 000E90E0  80 6D 99 48 */	lwz r3, lbl_80320808-_SDA_BASE_(r13)
@@ -99,10 +100,8 @@ func_800ED7C0:
 /* 800ED7C8 000E90E8  7C 00 1B 78 */	or r0, r0, r3
 /* 800ED7CC 000E90EC  54 03 0F FE */	srwi r3, r0, 0x1f
 /* 800ED7D0 000E90F0  4E 80 00 20 */	blr 
-/* 800ED7D4 000E90F4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800ED7D8 000E90F8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800ED7DC 000E90FC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global lbl_800ED7E0
 lbl_800ED7E0:
 /* 800ED7E0 000E9100  81 8D 99 48 */	lwz r12, lbl_80320808-_SDA_BASE_(r13)
@@ -111,8 +110,6 @@ lbl_800ED7E0:
 /* 800ED7EC 000E910C  7D 89 03 A6 */	mtctr r12
 /* 800ED7F0 000E9110  4E 80 04 20 */	bctr 
 /* 800ED7F4 000E9114  4E 80 00 20 */	blr 
-/* 800ED7F8 000E9118  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800ED7FC 000E911C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
 
 .section .rodata, "wa"  # 0x802DDDD0 - 0x802E4A88
@@ -122,13 +119,13 @@ lbl_800ED7E0:
 lbl_802DDE10:
 
 	# ROM: 0x2D9F10
-	.4byte 0x802FF6E0  ;# ptr
-	.4byte 0x802FF770  ;# ptr
-	.4byte 0x802FF820  ;# ptr
-	.4byte 0x802FF8D8  ;# ptr
-	.4byte 0x802FF988  ;# ptr
-	.4byte 0x802FFA28  ;# ptr
-	.4byte 0x802FFAD4  ;# ptr
+	.4byte lbl_802FF6E0
+	.4byte lbl_802FF770
+	.4byte lbl_802FF820
+	.4byte lbl_802FF8D8
+	.4byte lbl_802FF988
+	.4byte lbl_802FFA28
+	.4byte lbl_802FFAD4
 
 
 .global lbl_802DDE2C
@@ -136,18 +133,20 @@ lbl_802DDE10:
 lbl_802DDE2C:
 
 	# ROM: 0x2D9F2C
-	.4byte 0x802FF6E0  ;# ptr
-	.4byte 0x802FFB68  ;# ptr
-	.4byte 0x802FF820  ;# ptr
-	.4byte 0x802FFC0C  ;# ptr
-	.4byte 0x802FFCB0  ;# ptr
-	.4byte 0x802FFA28  ;# ptr
-	.4byte 0x802FFAD4  ;# ptr
+	.4byte lbl_802FF6E0 
+	.4byte lbl_802FFB68 
+	.4byte lbl_802FF820 
+	.4byte lbl_802FFC0C 
+	.4byte lbl_802FFCB0 
+	.4byte lbl_802FFA28 
+	.4byte lbl_802FFAD4 
 
 
 .section .data, "wa"  # 0x802F17E0 - 0x80315F30
 
+.global lbl_802FF6E0
 lbl_802FF6E0:
+	# "\n\n\nエラーが発生しました。\n\nイジェクトボタンを押してディスクを取り出してか\nら、本体の電源をOFFにして、本体の取扱説明書の\n指示に従ってください。"
 	.4byte 0x0A0A0A83
 	.4byte 0x47838981
 	.4byte 0x5B82AA94
@@ -184,62 +183,24 @@ lbl_802FF6E0:
 	.4byte 0x82AD82BE
 	.4byte 0x82B382A2
 	.4byte 0x81420000
+.global lbl_802FF770
+lbl_802FF770:
 	.asciz "\n\n\nAn error has occurred.\nPress the Eject Button, remove the\nGame Disc, and turn off the power to the\nconsole. Please read the Wii Operations\nManual for further instructions."
 	.balign 4
-	.4byte 0x0A0A0A45
-	.4byte 0x696E2046
-	.4byte 0x65686C65
-	.4byte 0x72206973
-	.4byte 0x74206175
-	.4byte 0x66676574
-	.4byte 0x72657465
-	.4byte 0x6E2E0A44
-	.4byte 0x72FC636B
-	.asciz "e den Ausgabeknopf, entnimm die\nDisc und schalte die Wii-Konsole aus.\nBitte lies die Wii-Bedienungsanleitung,\num weitere Informationen zu erhalten."
-	.4byte 0x0A0A0A55
-	.4byte 0x6E652065
-	.4byte 0x72726575
-	.4byte 0x72206573
-	.4byte 0x74207375
-	.4byte 0x7276656E
-	.4byte 0x75652E0A
-	.4byte 0x41707075
-	.4byte 0x79657A20
-	.4byte 0x73757220
-	.4byte 0x6C652062
-	.4byte 0x6F75746F
-	.4byte 0x6E20454A
-	.4byte 0x4543542C
-	.4byte 0x20726574
-	.4byte 0x6972657A
-	.4byte 0x0A6C6520
-	.4byte 0x64697371
-	.4byte 0x75652065
-	.4byte 0x7420E974
-	.4byte 0x6569676E
-	.4byte 0x657A206C
-	.4byte 0x6120636F
-	.4byte 0x6E736F6C
-	.4byte 0x652E0A56
-	.4byte 0x6575696C
-	.4byte 0x6C657A20
-	.4byte 0x766F7573
-	.4byte 0x2072E966
-	.4byte 0xE9726572
-	.4byte 0x20617520
-	.4byte 0x4D6F6465
-	.4byte 0x20642765
-	.4byte 0x6D706C6F
-	.4byte 0x690A6465
-	.4byte 0x206C6120
-	.4byte 0x57696920
-	.4byte 0x706F7572
-	.4byte 0x20706C75
-	.4byte 0x73206465
-	.4byte 0x2064E974
-	.asciz "ails."
+.global lbl_802FF820
+lbl_802FF820:
+	#"\n\n\nEin Fehler ist aufgetreten.\nDrücke den Ausgabeknopf, entnimm die\nDisc und schalte die Wii-Konsole aus.\nBitte lies die Wii-Bedienungsanleitung,\num weitere Informationen zu erhalten."
+	.asciz "\n\n\nEin Fehler ist aufgetreten.\nDr\xFC\cke den Ausgabeknopf, entnimm die\nDisc und schalte die Wii-Konsole aus.\nBitte lies die Wii-Bedienungsanleitung,\num weitere Informationen zu erhalten."
+.global lbl_802FF8D8
+lbl_802FF8D8:
+	#"\n\n\nUne erreur est survenue.\nAppuyez sur le bouton EJECT, retirez\nle disque et éteignez la console.\nVeuillez vous référer au Mode d'emploi\nde la Wii pour plus de détails."
+	.asciz "\n\n\nUne erreur est survenue.\nAppuyez sur le bouton EJECT, retirez\nle disque et \xE9teignez la console.\nVeuillez vous r\xE9\x66\xE9rer au Mode d'emploi\nde la Wii pour plus de d\xE9tails."
 	.balign 4
-	.4byte 0
+	.asciz ""
+	.balign 4
+.global lbl_802FF988
+lbl_802FF988:
+	#"\n\n\nOcurrió un Error.\nOprime el Botón EJECT, saca el disco\ny apaga la consola. Consulta el manual\nde operaciones de la consola Wii para\nobtener más información."
 	.4byte 0x0A0A0A4F
 	.4byte 0x63757272
 	.4byte 0x69F32075
@@ -280,13 +241,24 @@ lbl_802FF6E0:
 	.4byte 0x6E666F72
 	.4byte 0x6D616369
 	.4byte 0xF36E2E00
+.global lbl_802FFA28
+lbl_802FFA28:
+	#"\n\n\nSi è verificato un errore.\nPremi il pulsante EJECT, estrai il disco\ne spegni la console. Per maggiori\ninformazioni, consulta il manuale di\nistruzioni della console Wii."
 	.4byte 0x0A0A0A53
 	.4byte 0x6920E820
 	.asciz "verificato un errore.\nPremi il pulsante EJECT, estrai il disco\ne spegni la console. Per maggiori\ninformazioni, consulta il manuale di\nistruzioni della console Wii."
+	.balign 4
+.global lbl_802FFAD4
+lbl_802FFAD4:
 	.asciz "\n\n\nEr is een fout opgetreden.\nDruk op de EJECT-knop, verwijder de\ndisk en zet het Wii-systeem uit. Lees\nde Wii-handleiding voor meer informatie."
 	.balign 4
+.global lbl_802FFB68
+lbl_802FFB68:
 	.asciz "\n\n\nAn error has occurred.\nPress the EJECT Button, remove the Disc,\nand turn off the power to the console.\nPlease refer to the Wii Operations Manual\nfor details."
 	.balign 4
+.global lbl_802FFC0C
+lbl_802FFC0C:
+	#"\n\n\nUne erreur est survenue.\nAppuyez sur le bouton EJECT, retirez\nle disque et éteignez la console.\nVeuillez vous référer au mode d'emploi\nWii pour plus de détails."
 	.4byte 0x0A0A0A55
 	.4byte 0x6E652065
 	.4byte 0x72726575
@@ -328,6 +300,9 @@ lbl_802FF6E0:
 	.4byte 0x64652064
 	.4byte 0xE9746169
 	.4byte 0x6C732E00
+.global lbl_802FFCB0
+lbl_802FFCB0:
+	#"\n\n\nSe ha producido un error.\nPulsa el Botón EJECT, extrae el disco y\napaga la consola. Consulta el manual de\ninstrucciones de la consola Wii para\nobtener más información."
 	.4byte 0x0A0A0A53
 	.4byte 0x65206861
 	.4byte 0x2070726F
@@ -371,6 +346,9 @@ lbl_802FF6E0:
 	.4byte 0x666F726D
 	.4byte 0x616369F3
 	.4byte 0x6E2E0000
+.global lbl_802FFD5C
+lbl_802FFD5C:
+	#"\n\nエラーコード１０４。\nエラーが発生しました。\n\nイジェクトボタンを押してディスクを取り出してか\nら、本体の電源をOFFにして、本体の取扱説明書の\n指示に従ってください。"
 	.4byte 0x0A0A8347
 	.4byte 0x8389815B
 	.4byte 0x8352815B
@@ -412,6 +390,8 @@ lbl_802FF6E0:
 	.4byte 0x82AD82BE
 	.4byte 0x82B382A2
 	.4byte 0x81420000
+.global lbl_802FFE00
+lbl_802FFE00:
 	.asciz "\n\nError #104,\nAn error has occurred.\nPress the EJECT Button, remove the\nGame Disc, and turn the power off.\nPlease read the Wii Operations Manual\nfor more information."
 	.balign 4
 
@@ -423,8 +403,8 @@ lbl_802FF6E0:
 lbl_8031FB28:
 
 	# ROM: 0x31BC28
-	.4byte 0x802FFD5C  ;# ptr
-	.4byte 0x802FFE00  ;# ptr
+	.4byte lbl_802FFD5C
+	.4byte lbl_802FFE00
 
 
 .section .sbss, "wa"  # 0x803205F0 - 0x80320F80

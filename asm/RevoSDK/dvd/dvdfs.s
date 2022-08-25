@@ -18,6 +18,7 @@ func_800E73F0:
 /* 800E7418 000E2D38  90 0D 98 94 */	stw r0, lbl_80320754-_SDA_BASE_(r13)
 /* 800E741C 000E2D3C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_800E7420
 func_800E7420:
 /* 800E7420 000E2D40  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -30,7 +31,7 @@ func_800E7420:
 /* 800E743C 000E2D5C  83 AD 98 80 */	lwz r29, lbl_80320740-_SDA_BASE_(r13)
 /* 800E7440 000E2D60  7F 5C D3 78 */	mr r28, r26
 /* 800E7444 000E2D64  3B FF 5C 70 */	addi r31, r31, lbl_80305C70@l
-/* 800E7448 000E2D68  3F C0 80 30 */	lis r30, 0x8030
+/* 800E7448 000E2D68  3F C0 80 30 */	lis r30, lbl_802FF138@ha
 lbl_800E744C:
 /* 800E744C 000E2D6C  88 1A 00 00 */	lbz r0, 0(r26)
 /* 800E7450 000E2D70  7C 00 07 75 */	extsb. r0, r0
@@ -126,7 +127,7 @@ lbl_800E7580:
 /* 800E7580 000E2EA0  2C 04 00 00 */	cmpwi r4, 0
 /* 800E7584 000E2EA4  41 82 00 44 */	beq lbl_800E75C8
 /* 800E7588 000E2EA8  7F 86 E3 78 */	mr r6, r28
-/* 800E758C 000E2EAC  38 BE F1 38 */	addi r5, r30, -3784
+/* 800E758C 000E2EAC  38 BE F1 38 */	addi r5, r30, lbl_802FF138@l
 /* 800E7590 000E2EB0  38 6D 8C 48 */	addi r3, r13, lbl_8031FB08-_SDA_BASE_
 /* 800E7594 000E2EB4  38 80 01 C4 */	li r4, 0x1c4
 /* 800E7598 000E2EB8  4C C6 31 82 */	crclr 6
@@ -252,9 +253,8 @@ lbl_800E7710:
 /* 800E771C 000E303C  7C 08 03 A6 */	mtlr r0
 /* 800E7720 000E3040  38 21 00 30 */	addi r1, r1, 0x30
 /* 800E7724 000E3044  4E 80 00 20 */	blr 
-/* 800E7728 000E3048  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800E772C 000E304C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800E7730
 func_800E7730:
 /* 800E7730 000E3050  2C 03 00 00 */	cmpwi r3, 0
@@ -285,9 +285,8 @@ lbl_800E7760:
 /* 800E778C 000E30AC  90 04 00 38 */	stw r0, 0x38(r4)
 /* 800E7790 000E30B0  90 04 00 0C */	stw r0, 0xc(r4)
 /* 800E7794 000E30B4  4E 80 00 20 */	blr 
-/* 800E7798 000E30B8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800E779C 000E30BC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800E77A0
 func_800E77A0:
 /* 800E77A0 000E30C0  94 21 FF 70 */	stwu r1, -0x90(r1)
@@ -370,6 +369,7 @@ lbl_800E78A8:
 /* 800E78B8 000E31D8  38 21 00 90 */	addi r1, r1, 0x90
 /* 800E78BC 000E31DC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_800E78C0
 func_800E78C0:
 /* 800E78C0 000E31E0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -381,10 +381,8 @@ func_800E78C0:
 /* 800E78D8 000E31F8  7C 08 03 A6 */	mtlr r0
 /* 800E78DC 000E31FC  38 21 00 10 */	addi r1, r1, 0x10
 /* 800E78E0 000E3200  4E 80 00 20 */	blr 
-/* 800E78E4 000E3204  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800E78E8 000E3208  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800E78EC 000E320C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800E78F0
 func_800E78F0:
 /* 800E78F0 000E3210  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -466,10 +464,8 @@ lbl_800E79E8:
 /* 800E79F8 000E3318  7C 08 03 A6 */	mtlr r0
 /* 800E79FC 000E331C  38 21 00 20 */	addi r1, r1, 0x20
 /* 800E7A00 000E3320  4E 80 00 20 */	blr 
-/* 800E7A04 000E3324  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800E7A08 000E3328  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800E7A0C 000E332C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800E7A10
 func_800E7A10:
 /* 800E7A10 000E3330  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -528,6 +524,9 @@ lbl_800E7A98:
 /* 800E7AD4 000E33F4  7C 08 03 A6 */	mtlr r0
 /* 800E7AD8 000E33F8  38 21 00 20 */	addi r1, r1, 0x20
 /* 800E7ADC 000E33FC  4E 80 00 20 */	blr 
+
+.balign 16, 0
+.global lbl_800E7AE0
 lbl_800E7AE0:
 /* 800E7AE0 000E3400  81 84 00 38 */	lwz r12, 0x38(r4)
 /* 800E7AE4 000E3404  2C 0C 00 00 */	cmpwi r12, 0
@@ -535,9 +534,8 @@ lbl_800E7AE0:
 /* 800E7AEC 000E340C  7D 89 03 A6 */	mtctr r12
 /* 800E7AF0 000E3410  4E 80 04 20 */	bctr 
 /* 800E7AF4 000E3414  4E 80 00 20 */	blr 
-/* 800E7AF8 000E3418  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800E7AFC 000E341C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800E7B00
 func_800E7B00:
 /* 800E7B00 000E3420  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -625,18 +623,20 @@ lbl_800E7C10:
 /* 800E7C1C 000E353C  7C 08 03 A6 */	mtlr r0
 /* 800E7C20 000E3540  38 21 00 20 */	addi r1, r1, 0x20
 /* 800E7C24 000E3544  4E 80 00 20 */	blr 
-/* 800E7C28 000E3548  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800E7C2C 000E354C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+
+.balign 16, 0
+.global lbl_800E7C30
 lbl_800E7C30:
 /* 800E7C30 000E3550  38 6D 98 88 */	addi r3, r13, lbl_80320748-_SDA_BASE_
 /* 800E7C34 000E3554  4B FF BF FC */	b func_800E3C30
-/* 800E7C38 000E3558  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800E7C3C 000E355C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
 
 .section .data, "wa"  # 0x802F17E0 - 0x80315F30
+
+.global lbl_802FF138
 lbl_802FF138:
 	.asciz "DVDConvertEntrynumToPath(possibly DVDOpen or DVDChangeDir or DVDOpenDir): specified directory or file (%s) doesn't match standard 8.3 format. This is a temporary restriction and will be removed soon\n"
+	.balign 4
 
 
 .global lbl_802FF200
@@ -654,6 +654,7 @@ lbl_802FF238:
 
 	# ROM: 0x2FB338
 	.asciz "DVDReadAsync(): specified area is out of the file  "
+	.balign 4
 
 
 .global lbl_802FF26C
@@ -687,9 +688,6 @@ lbl_8031FB08:
 
 .section .sbss, "wa"  # 0x803205F0 - 0x80320F80
 
-.global lbl_8032073C
-lbl_8032073C:
-	.skip 0x4
 .global lbl_80320740
 lbl_80320740:
 	.skip 0x8

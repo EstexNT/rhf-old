@@ -639,6 +639,9 @@ lbl_80320730:
 .global lbl_80320738
 lbl_80320738:
 	.skip 0x4
+.global lbl_8032073C
+lbl_8032073C:
+	.skip 0x4
 
 
 .section .bss, "wa" # 0x8034C9C0 - 0x803D5C28
