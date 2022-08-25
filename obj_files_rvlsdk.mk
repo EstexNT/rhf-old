@@ -52,3 +52,8 @@ RVL_SDK_DVD_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/dvd/dvdFatal.o \
 	$(BUILD_DIR)/asm/RevoSDK/dvd/dvdDeviceError.o \
 	$(BUILD_DIR)/asm/RevoSDK/dvd/dvd_broadway.o 
+
+RVL_SDK_VI_O_FILES :=\
+	$(BUILD_DIR)/asm/RevoSDK/vi/vi.o \
+	$(BUILD_DIR)/asm/RevoSDK/vi/i2c.o \
+	$(BUILD_DIR)/asm/RevoSDK/vi/vi3in1.o 
