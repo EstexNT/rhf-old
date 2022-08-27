@@ -58,5 +58,8 @@ RVL_SDK_VI_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/vi/i2c.o \
 	$(BUILD_DIR)/asm/RevoSDK/vi/vi3in1.o 
 
-RVL_SDK_PAD_O_fILES :=\
+RVL_SDK_PAD_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/pad/Pad.o
+
+RVL_SDK_AI_O_FILES :=\
+	$(BUILD_DIR)/asm/RevoSDK/ai/ai.o
