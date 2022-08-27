@@ -1564,6 +1564,419 @@ lbl_800F4B1C:
 /* 800F4B78 000F0498  4E 80 00 20 */	blr 
 
 
+.section .data, "wa"  # 0x802F17E0 - 0x80315F30
+
+.global lbl_803014A0
+
+lbl_803014A0:
+
+	# ROM: 0x2FD5A0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00300397
+	.4byte 0x3B49101D
+	.4byte 0x365882B3
+	.4byte 0xEB001000
+	.4byte 0x10001000
+	.4byte 0x10001080
+	.4byte 0x1B80EB00
+	.4byte 0x00000028
+	.4byte 0x005A02DB
+	.4byte 0x0D8D3049
+	.4byte 0x101D3658
+	.4byte 0x82B3EB00
+	.4byte 0x10001000
+	.4byte 0x10401100
+	.4byte 0x18804200
+	.4byte 0xEB000000
+	.4byte 0x007A023C
+	.4byte 0x076D129C
+	.4byte 0x2724101D
+	.4byte 0x365882B3
+	.4byte 0xEB001000
+	.4byte 0x100010C0
+	.4byte 0x15802900
+	.4byte 0x6200EB00
+	.4byte 0x004E0199
+	.4byte 0x052D0B24
+	.4byte 0x142920A4
+	.4byte 0x101D3658
+	.4byte 0x82B3EB00
+	.4byte 0x10001040
+	.4byte 0x12C01DC0
+	.4byte 0x3B0078C0
+	.4byte 0xEB0000EC
+	.4byte 0x03D70800
+	.4byte 0x0D9E143E
+	.4byte 0x1BDB101D
+	.4byte 0x365882B3
+	.4byte 0xEB001000
+	.4byte 0x10C016C0
+	.4byte 0x27C04B80
+	.4byte 0x8980EB00
+	.4byte 0x02760666
+	.4byte 0x0A960EF3
+	.4byte 0x13AC1849
+	.4byte 0x101D3658
+	.4byte 0x82B3EB00
+	.4byte 0x10001200
+	.4byte 0x1C003280
+	.4byte 0x59C09600
+	.4byte 0xEB0004EC
+	.4byte 0x08F50C96
+	.4byte 0x0FCF12C6
+	.4byte 0x1580101D
+	.4byte 0x365882B3
+	.4byte 0xEB001000
+	.4byte 0x14002200
+	.4byte 0x3CC06640
+	.4byte 0x9FC0EB00
+	.4byte 0x08000BAE
+	.4byte 0x0E001030
+	.4byte 0x11CB1349
+	.4byte 0x101D3658
+	.4byte 0x82B3EB00
+	.4byte 0x10001680
+	.4byte 0x28C04680
+	.4byte 0x7100A780
+	.4byte 0xEB000BB1
+	.4byte 0x0E140F2D
+	.4byte 0x101810E5
+	.4byte 0x1180101D
+	.4byte 0x365882B3
+	.4byte 0xEB001000
+	.4byte 0x19802F80
+	.4byte 0x4FC07A00
+	.4byte 0xADC0EB00
+	.4byte 0x10001000
+	.4byte 0x10001000
+	.4byte 0x10001000
+	.4byte 0x10204060
+	.4byte 0x80A0EB00
+	.4byte 0x10002000
+	.4byte 0x40006000
+	.4byte 0x8000A000
+	.4byte 0xEB0014EC
+	.4byte 0x11C21078
+	.4byte 0x0FB60F2F
+	.4byte 0x0EB6101D
+	.4byte 0x365882B3
+	.4byte 0xEB001000
+	.4byte 0x21003CC0
+	.4byte 0x5FC08900
+	.4byte 0xB780EB00
+	.4byte 0x19D81333
+	.4byte 0x10D20F6D
+	.4byte 0x0E5E0DA4
+	.4byte 0x101D3658
+	.4byte 0x82B3EB00
+	.4byte 0x10002500
+	.4byte 0x430066C0
+	.4byte 0x8F40BB40
+	.4byte 0xEB001EC4
+	.4byte 0x147A110F
+	.4byte 0x0F0C0DA1
+	.4byte 0x0CB6101D
+	.4byte 0x365882B3
+	.4byte 0xEB001000
+	.4byte 0x29004900
+	.4byte 0x6D4094C0
+	.4byte 0xBE80EB00
+	.4byte 0x24001570
+	.4byte 0x110F0EAA
+	.4byte 0x0D0F0BDB
+	.4byte 0x101D3658
+	.4byte 0x82B3EB00
+	.4byte 0x10002D40
+	.4byte 0x4EC07300
+	.4byte 0x9980C180
+	.4byte 0xEB00293B
+	.4byte 0x163D110F
+	.4byte 0x0E300C7D
+	.4byte 0x0B24101D
+	.4byte 0x365882B3
+	.4byte 0xEB001000
+	.4byte 0x31805440
+	.4byte 0x78809DC0
+	.4byte 0xC400EB00
+	.4byte 0x2E27170A
+	.4byte 0x10D20DE7
+	.4byte 0x0BEB0A80
+	.4byte 0x101D3658
+	.4byte 0x82B3EB00
+	.4byte 0x10003580
+	.4byte 0x59807D40
+	.4byte 0xA1C0C640
+	.4byte 0xEB003362
+	.4byte 0x175C10D2
+	.4byte 0x0D6D0B6D
+	.4byte 0x09ED101D
+	.4byte 0x365882B3
+	.4byte 0xEB001000
+	.4byte 0x39C05E40
+	.4byte 0x8200A540
+	.4byte 0xC840EB00
+	.4byte 0x384E17AE
+	.4byte 0x10B40D0C
+	.4byte 0x0AF0096D
+	.4byte 0x101D3658
+	.4byte 0x82B3EB00
+	.4byte 0x10003DC0
+	.4byte 0x62C08640
+	.4byte 0xA880CA00
+	.4byte 0xEB003D3B
+	.4byte 0x1800105A
+	.4byte 0x0CC30A72
+	.4byte 0x0900101D
+	.4byte 0x365882B3
+	.4byte 0xEB001000
+	.4byte 0x41C06740
+	.4byte 0x8A00AB80
+	.4byte 0xCB80EB00
+	.4byte 0x41D81828
+	.4byte 0x103C0C49
+	.4byte 0x0A1F0892
+	.4byte 0x101D3658
+	.4byte 0x82B3EB00
+	.4byte 0x10004580
+	.4byte 0x6B408DC0
+	.4byte 0xAE00CD00
+	.4byte 0xEB004676
+	.4byte 0x18510FE1
+	.4byte 0x0C0009B6
+	.4byte 0x0836101D
+	.4byte 0x365882B3
+	.4byte 0xEB001000
+	.4byte 0x49406F40
+	.4byte 0x9100B080
+	.4byte 0xCE40EB00
+	.4byte 0x4AC4187A
+	.4byte 0x0FA50B9E
+	.4byte 0x096307DB
+	.4byte 0x101D3658
+	.4byte 0x82B3EB00
+	.4byte 0x10004CC0
+	.4byte 0x73009440
+	.4byte 0xB2C0CF80
+	.4byte 0xEB004F13
+	.4byte 0x18510F69
+	.4byte 0x0B6D090F
+	.4byte 0x0780101D
+	.4byte 0x365882B3
+	.4byte 0xEB001000
+	.4byte 0x50407640
+	.4byte 0x9700B500
+	.4byte 0xD0C0EB00
+	.4byte 0x5313187A
+	.4byte 0x0F0F0B24
+	.4byte 0x08BC0736
+	.4byte 0x101D3658
+	.4byte 0x82B3EB00
+	.4byte 0x10005380
+	.4byte 0x79C099C0
+	.4byte 0xB700D1C0
+	.4byte 0xEB005713
+	.4byte 0x18510EF0
+	.4byte 0x0AC3087D
+	.4byte 0x06ED101D
+	.4byte 0x365882B3
+	.4byte 0xEB001000
+	.4byte 0x56C07CC0
+	.4byte 0x9C80B8C0
+	.4byte 0xD2C0EB00
+	.4byte 0x5B131828
+	.4byte 0x0E960A92
+	.4byte 0x082906B6
+	.4byte 0x101D3658
+	.4byte 0x82B3EB00
+	.4byte 0x10005A00
+	.4byte 0x7FC09EC0
+	.4byte 0xBA80D380
+	.4byte 0xEB005EC4
+	.4byte 0x18000E78
+	.4byte 0x0A300800
+	.4byte 0x066D101D
+	.4byte 0x365882B3
+	.4byte 0xEB001000
+	.4byte 0x5D008280
+	.4byte 0xA140BC00
+	.4byte 0xD480EB00
+	.4byte 0x627617D7
+	.4byte 0x0E1E0A00
+	.4byte 0x07C10636
+	.4byte 0x101D3658
+	.4byte 0x82B3EB00
+	.4byte 0x10006000
+	.4byte 0x8540A340
+	.4byte 0xBD80D540
+	.4byte 0xEB0065D8
+	.4byte 0x17AE0DE1
+	.4byte 0x09CF0782
+	.4byte 0x0600101D
+	.4byte 0x365882B3
+	.4byte 0xEB001000
+	.4byte 0x62C087C0
+	.4byte 0xA540BF00
+	.4byte 0xD600EB00
+	.4byte 0x693B1785
+	.4byte 0x0DA50986
+	.4byte 0x074305DB
+	.4byte 0x101D3658
+	.4byte 0x82B3EB00
+	.4byte 0x10006580
+	.4byte 0x8A40A740
+	.4byte 0xC040D680
+	.4byte 0xEB000000
+
+.global lbl_803018C0
+lbl_803018C0:
+	.4byte 0x36000000
+	.4byte 0
+	.4byte 0x1B1B2407
+	.4byte 0xF800000F
+	.4byte 0x0F600000
+	.4byte 0
+	.4byte 0
+
+.global lbl_803018DC
+lbl_803018DC:
+	.4byte 0x3E1D1125
+	.4byte 0x11010700
+	.4byte 0x1B1B2407
+	.4byte 0xF800000F
+	.4byte 0x0F60010A
+	.4byte 0x00050403
+	.4byte 0xFF000000
+
+.global lbl_803018F8
+lbl_803018F8:
+	.4byte 0x3E171521
+	.4byte 0x15050502
+	.4byte 0x1B1B2407
+	.4byte 0xF800000F
+	.4byte 0x0F60010A
+	.4byte 0x00050403
+	.4byte 0xFF000000
+
+.global lbl_80301914
+lbl_80301914:
+	.4byte 0x361A222A
+	.4byte 0x22050200
+	.4byte 0x1C3D1403
+	.4byte 0xFE0154FE
+	.4byte 0x7E600008
+	.4byte 0x00040701
+	.4byte 0x55010000
+
+.global lbl_80301930
+lbl_80301930:
+	.4byte 0x361A222A
+	.4byte 0x22050200
+	.4byte 0x1C3D1403
+	.4byte 0xFE0154FE
+	.4byte 0x7E600008
+	.4byte 0x00040701
+	.4byte 0x55010000
+
+.global lbl_8030194C
+lbl_8030194C:
+	.4byte 0x361A222A
+	.4byte 0x22050200
+	.4byte 0x1C3D1403
+	.4byte 0xFE0154FE
+	.4byte 0x7E600008
+	.4byte 0x00040701
+	.4byte 0x55010000
+
+.global lbl_80301968
+lbl_80301968:
+	.4byte 0x36000000
+	.4byte 0
+	.4byte 0x1B1B2407
+	.4byte 0xF800001E
+	.4byte 0x1E600000
+	.4byte 0
+	.4byte 0x00010000
+
+.global lbl_80301984
+lbl_80301984:
+	.4byte 0x361D1125
+	.4byte 0x11010700
+	.4byte 0x1B1B2407
+	.4byte 0xF800001E
+	.4byte 0x1E60010A
+	.4byte 0x00050403
+	.4byte 0xFF010000
+
+.global lbl_803019A0
+lbl_803019A0:
+	.4byte 0x36171521
+	.4byte 0x15050502
+	.4byte 0x1B1B2407
+	.4byte 0xF800001E
+	.4byte 0x1E60010A
+	.4byte 0x00050403
+	.4byte 0xFF010000
+
+.global lbl_803019BC
+lbl_803019BC:
+	.4byte 0x36000000
+	.4byte 0
+	.4byte 0x1B1B2407
+	.4byte 0xF800000F
+	.4byte 0x0F600000
+	.4byte 0
+	.4byte 0
+
+.global lbl_803019D8
+lbl_803019D8:
+	.4byte 0x361D1125
+	.4byte 0x11010700
+	.4byte 0x1B1B2407
+	.4byte 0xF800000F
+	.4byte 0x0F60010A
+	.4byte 0x00050403
+	.4byte 0xFF000000
+
+.global lbl_803019F4
+lbl_803019F4:
+	.4byte 0x36171521
+	.4byte 0x15050502
+	.4byte 0x1B1B2407
+	.4byte 0xF800000F
+	.4byte 0x0F60010A
+	.4byte 0x00050403
+	.4byte 0xFF000000
+
+.global lbl_80301A10
+lbl_80301A10:
+	.4byte 0x01000000
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.global lbl_80301A2C
+lbl_80301A2C:
+	.asciz "vi3in1.c"
+	.balign 4
+
+.global lbl_80301A38
+lbl_80301A38:
+	.asciz "VISetCGMS(): Tried to set APS Trigger bit(WORD2[3:2]) \nwhen the scan is progressive in DTV mode, which is forbidden\n"
+	.balign 4
+
+
 .section .sdata, "wa"  # 0x8031FA98 - 0x8031FFD8
 
 .global lbl_8031FB70
