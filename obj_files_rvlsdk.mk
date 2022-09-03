@@ -75,3 +75,8 @@ RVL_SDK_AX_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/ax/AXComp.o \
 	$(BUILD_DIR)/asm/RevoSDK/ax/AXProf.o \
 	$(BUILD_DIR)/asm/RevoSDK/ax/DSPCode.o 
+
+RVL_SDK_AXFX_O_FILES :=\
+	$(BUILD_DIR)/asm/RevoSDK/axfx/AXFXReverbHi.o \
+	$(BUILD_DIR)/asm/RevoSDK/axfx/AXFXReverbHiExp.o \
+	$(BUILD_DIR)/asm/RevoSDK/axfx/AXFXHooks.o 
