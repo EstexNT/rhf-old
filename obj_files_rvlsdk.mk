@@ -63,3 +63,15 @@ RVL_SDK_PAD_O_FILES :=\
 
 RVL_SDK_AI_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/ai/ai.o
+
+RVL_SDK_AX_O_FILES :=\
+	$(BUILD_DIR)/asm/RevoSDK/ax/AX.o \
+	$(BUILD_DIR)/asm/RevoSDK/ax/AXAlloc.o \
+	$(BUILD_DIR)/asm/RevoSDK/ax/AXAux.o \
+	$(BUILD_DIR)/asm/RevoSDK/ax/AXCL.o \
+	$(BUILD_DIR)/asm/RevoSDK/ax/AXOut.o \
+	$(BUILD_DIR)/asm/RevoSDK/ax/AXSPB.o \
+	$(BUILD_DIR)/asm/RevoSDK/ax/AXVPB.o \
+	$(BUILD_DIR)/asm/RevoSDK/ax/AXComp.o \
+	$(BUILD_DIR)/asm/RevoSDK/ax/AXProf.o \
+	$(BUILD_DIR)/asm/RevoSDK/ax/DSPCode.o 
