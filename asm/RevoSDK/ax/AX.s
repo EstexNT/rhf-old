@@ -27,16 +27,12 @@ lbl_800F69E4:
 /* 800F69E8 000F2308  7C 08 03 A6 */	mtlr r0
 /* 800F69EC 000F230C  38 21 00 10 */	addi r1, r1, 0x10
 /* 800F69F0 000F2310  4E 80 00 20 */	blr 
-/* 800F69F4 000F2314  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800F69F8 000F2318  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800F69FC 000F231C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800F6A00
 func_800F6A00:
 /* 800F6A00 000F2320  80 6D 9A C0 */	lwz r3, lbl_80320980-_SDA_BASE_(r13)
 /* 800F6A04 000F2324  4E 80 00 20 */	blr 
-/* 800F6A08 000F2328  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800F6A0C 000F232C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
 
 .section .data, "wa"  # 0x802F17E0 - 0x80315F30
@@ -54,7 +50,7 @@ lbl_80301B50:
 lbl_8031FBA8:
 
 	# ROM: 0x31BCA8
-	.4byte 0x80301B50  ;# ptr
+	.4byte lbl_80301B50 
 	.4byte 0
 
 

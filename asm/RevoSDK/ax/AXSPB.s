@@ -2,13 +2,14 @@
 
 .section .text, "ax"  # 0x800D8FF0 - 0x801D3284
 
+.balign 16, 0
 .global func_800F8AC0
 func_800F8AC0:
 /* 800F8AC0 000F43E0  3C 60 80 35 */	lis r3, lbl_803570A0@ha
 /* 800F8AC4 000F43E4  38 63 70 A0 */	addi r3, r3, lbl_803570A0@l
 /* 800F8AC8 000F43E8  4E 80 00 20 */	blr 
-/* 800F8ACC 000F43EC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800F8AD0
 func_800F8AD0:
 /* 800F8AD0 000F43F0  3C C0 2A AB */	lis r6, 0x2AAAAAAB@ha
@@ -41,8 +42,8 @@ lbl_800F8B28:
 /* 800F8B30 000F4450  90 04 00 00 */	stw r0, 0(r4)
 /* 800F8B34 000F4454  B0 05 00 00 */	sth r0, 0(r5)
 /* 800F8B38 000F4458  4E 80 00 20 */	blr 
-/* 800F8B3C 000F445C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800F8B40
 func_800F8B40:
 /* 800F8B40 000F4460  3C C0 38 E4 */	lis r6, 0x38E38E39@ha
@@ -75,8 +76,8 @@ lbl_800F8B98:
 /* 800F8BA0 000F44C0  90 04 00 00 */	stw r0, 0(r4)
 /* 800F8BA4 000F44C4  B0 05 00 00 */	sth r0, 0(r5)
 /* 800F8BA8 000F44C8  4E 80 00 20 */	blr 
-/* 800F8BAC 000F44CC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800F8BB0
 func_800F8BB0:
 /* 800F8BB0 000F44D0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -173,9 +174,8 @@ func_800F8BB0:
 /* 800F8D1C 000F463C  7C 08 03 A6 */	mtlr r0
 /* 800F8D20 000F4640  38 21 00 10 */	addi r1, r1, 0x10
 /* 800F8D24 000F4644  4E 80 00 20 */	blr 
-/* 800F8D28 000F4648  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800F8D2C 000F464C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800F8D30
 func_800F8D30:
 /* 800F8D30 000F4650  38 00 00 00 */	li r0, 0
@@ -200,9 +200,8 @@ func_800F8D30:
 /* 800F8D7C 000F469C  90 0D 9B C8 */	stw r0, lbl_80320A88-_SDA_BASE_(r13)
 /* 800F8D80 000F46A0  90 0D 9B CC */	stw r0, lbl_80320A8C-_SDA_BASE_(r13)
 /* 800F8D84 000F46A4  4E 80 00 20 */	blr 
-/* 800F8D88 000F46A8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800F8D8C 000F46AC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800F8D90
 func_800F8D90:
 /* 800F8D90 000F46B0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -292,7 +291,6 @@ func_800F8D90:
 /* 800F8EE0 000F4800  83 C1 00 08 */	lwz r30, 8(r1)
 /* 800F8EE4 000F4804  38 21 00 10 */	addi r1, r1, 0x10
 /* 800F8EE8 000F4808  4E 80 00 20 */	blr 
-/* 800F8EEC 000F480C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
 
 .section .sbss, "wa"  # 0x803205F0 - 0x80320F80
