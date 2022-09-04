@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x800D8FF0 - 0x801D3284
 
+.balign 16, 0
 .global func_800FFC80
 func_800FFC80:
 /* 800FFC80 000FB5A0  D0 23 00 10 */	stfs f1, 0x10(r3)
@@ -11,8 +12,8 @@ func_800FFC80:
 /* 800FFC90 000FB5B0  D0 A3 00 20 */	stfs f5, 0x20(r3)
 /* 800FFC94 000FB5B4  D0 C3 00 24 */	stfs f6, 0x24(r3)
 /* 800FFC98 000FB5B8  4E 80 00 20 */	blr 
-/* 800FFC9C 000FB5BC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800FFCA0
 func_800FFCA0:
 /* 800FFCA0 000FB5C0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -128,8 +129,8 @@ lbl_800FFE18:
 /* 800FFE30 000FB750  7C 08 03 A6 */	mtlr r0
 /* 800FFE34 000FB754  38 21 00 10 */	addi r1, r1, 0x10
 /* 800FFE38 000FB758  4E 80 00 20 */	blr 
-/* 800FFE3C 000FB75C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800FFE40
 func_800FFE40:
 /* 800FFE40 000FB760  C0 02 F9 A8 */	lfs f0, lbl_80328988-_SDA2_BASE_(r2)
@@ -189,10 +190,8 @@ lbl_800FFEF4:
 /* 800FFEF8 000FB818  D0 63 00 20 */	stfs f3, 0x20(r3)
 /* 800FFEFC 000FB81C  D0 83 00 24 */	stfs f4, 0x24(r3)
 /* 800FFF00 000FB820  4E 80 00 20 */	blr 
-/* 800FFF04 000FB824  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800FFF08 000FB828  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800FFF0C 000FB82C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800FFF10
 func_800FFF10:
 /* 800FFF10 000FB830  D0 23 00 28 */	stfs f1, 0x28(r3)
@@ -200,6 +199,7 @@ func_800FFF10:
 /* 800FFF18 000FB838  D0 63 00 30 */	stfs f3, 0x30(r3)
 /* 800FFF1C 000FB83C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global lbl_800FFF20
 lbl_800FFF20:
 /* 800FFF20 000FB840  C0 03 00 28 */	lfs f0, 0x28(r3)
@@ -209,8 +209,8 @@ lbl_800FFF20:
 /* 800FFF30 000FB850  C0 03 00 30 */	lfs f0, 0x30(r3)
 /* 800FFF34 000FB854  D0 06 00 00 */	stfs f0, 0(r6)
 /* 800FFF38 000FB858  4E 80 00 20 */	blr 
-/* 800FFF3C 000FB85C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800FFF40
 func_800FFF40:
 /* 800FFF40 000FB860  FC 80 08 50 */	fneg f4, f1
@@ -220,8 +220,8 @@ func_800FFF40:
 /* 800FFF50 000FB870  D0 23 00 38 */	stfs f1, 0x38(r3)
 /* 800FFF54 000FB874  D0 03 00 3C */	stfs f0, 0x3c(r3)
 /* 800FFF58 000FB878  4E 80 00 20 */	blr 
-/* 800FFF5C 000FB87C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global lbl_800FFF60
 lbl_800FFF60:
 /* 800FFF60 000FB880  C0 03 00 34 */	lfs f0, 0x34(r3)
@@ -234,16 +234,15 @@ lbl_800FFF60:
 /* 800FFF7C 000FB89C  D0 25 00 00 */	stfs f1, 0(r5)
 /* 800FFF80 000FB8A0  D0 06 00 00 */	stfs f0, 0(r6)
 /* 800FFF84 000FB8A4  4E 80 00 20 */	blr 
-/* 800FFF88 000FB8A8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800FFF8C 000FB8AC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800FFF90
 func_800FFF90:
 /* 800FFF90 000FB8B0  80 04 00 00 */	lwz r0, 0(r4)
 /* 800FFF94 000FB8B4  90 03 00 0C */	stw r0, 0xc(r3)
 /* 800FFF98 000FB8B8  4E 80 00 20 */	blr 
-/* 800FFF9C 000FB8BC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_800FFFA0
 func_800FFFA0:
 /* 800FFFA0 000FB8C0  7C 80 00 34 */	cntlzw r0, r4
@@ -279,6 +278,7 @@ func_800FFFA0:
 /* 80100018 000FB938  B0 03 00 02 */	sth r0, 2(r3)
 /* 8010001C 000FB93C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_80100020
 func_80100020:
 /* 80100020 000FB940  2C 03 00 00 */	cmpwi r3, 0
@@ -342,9 +342,8 @@ lbl_801000D0:
 /* 801000EC 000FBA0C  90 06 05 FC */	stw r0, 0x5fc(r6)
 /* 801000F0 000FBA10  90 E3 00 A8 */	stw r7, 0xa8(r3)
 /* 801000F4 000FBA14  4E 80 00 20 */	blr 
-/* 801000F8 000FBA18  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 801000FC 000FBA1C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_80100100
 func_80100100:
 /* 80100100 000FBA20  2C 03 00 00 */	cmpwi r3, 0
@@ -408,9 +407,8 @@ lbl_801001B0:
 /* 801001CC 000FBAEC  90 06 05 FC */	stw r0, 0x5fc(r6)
 /* 801001D0 000FBAF0  90 E3 00 B0 */	stw r7, 0xb0(r3)
 /* 801001D4 000FBAF4  4E 80 00 20 */	blr 
-/* 801001D8 000FBAF8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 801001DC 000FBAFC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_801001E0
 func_801001E0:
 /* 801001E0 000FBB00  80 82 F9 70 */	lwz r4, lbl_80328950-_SDA2_BASE_(r2)
@@ -422,10 +420,8 @@ func_801001E0:
 /* 801001F8 000FBB18  60 00 00 04 */	ori r0, r0, 4
 /* 801001FC 000FBB1C  90 04 05 FC */	stw r0, 0x5fc(r4)
 /* 80100200 000FBB20  4E 80 00 20 */	blr 
-/* 80100204 000FBB24  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80100208 000FBB28  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8010020C 000FBB2C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_80100210
 func_80100210:
 /* 80100210 000FBB30  2C 09 00 00 */	cmpwi r9, 0
@@ -471,9 +467,6 @@ lbl_80100298:
 /* 801002A8 000FBBC8  60 00 A0 00 */	ori r0, r0, 0xa000
 /* 801002AC 000FBBCC  90 05 05 FC */	stw r0, 0x5fc(r5)
 /* 801002B0 000FBBD0  4E 80 00 20 */	blr 
-/* 801002B4 000FBBD4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 801002B8 000FBBD8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 801002BC 000FBBDC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
 
 .section .sdata2, "wa"  # 0x80328848 - 0x80329520
