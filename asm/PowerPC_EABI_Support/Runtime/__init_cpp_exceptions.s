@@ -20,6 +20,9 @@ lbl_8010478C:
 /* 80104790 001000B0  7C 08 03 A6 */	mtlr r0
 /* 80104794 001000B4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80104798 001000B8  4E 80 00 20 */	blr 
+
+.global func_8010479C
+func_8010479C:
 /* 8010479C 001000BC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801047A0 001000C0  7C 08 02 A6 */	mflr r0
 /* 801047A4 001000C4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -40,30 +43,24 @@ lbl_801047C0:
 #.section .ctors, "wa"  # 0x801F74E0 - 0x801F7580
 #
 #.global lbl_801F74E0
-#
 #lbl_801F74E0:
-#
 #	# ROM: 0x1F35E0
-#	.4byte 0x80104760  ;# ptr
+#	.4byte func_80104760
 
 
 
 #.section .dtors, "wa"  # 0x801F7580 - 0x801F75A0
 #
 #.global lbl_801F7584
-#
 #lbl_801F7584:
-#
-#	.4byte 0x8010479C  ;# ptr
+#	.4byte func_8010479C
 
 
 
 .section .sdata, "wa"  # 0x8031FA98 - 0x8031FFD8
 
 .global lbl_8031FC40
-
 lbl_8031FC40:
-
 	# ROM: 0x31BD40
 	.4byte 0xFFFFFFFE
 	.4byte 0

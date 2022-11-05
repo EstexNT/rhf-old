@@ -62,6 +62,5 @@ lbl_802DDEE8:
 
 	# ROM: 0x2D9FE8
 	.asciz "GCN_Mem_Alloc.c : InitDefaultHeap. No Heap Available\n"
-	.byte 0x4D, 0x65
-	.asciz "trowerks CW runtime library initializing default heap\n"
+	.asciz "Metrowerks CW runtime library initializing default heap\n"
 	.balign 4

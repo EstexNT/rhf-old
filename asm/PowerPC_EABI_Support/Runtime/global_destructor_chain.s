@@ -39,9 +39,7 @@ lbl_80103728:
 #.section .dtors, "wa"  # 0x801F7580 - 0x801F75A0
 #
 #.global lbl_801F7580
-#
 #lbl_801F7580:
-#
 #	# ROM: 0x1F3680
 #	.4byte func_801036FC
 

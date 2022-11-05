@@ -29,6 +29,9 @@ lbl_80104084:
 lbl_80104098:
 /* 80104098 000FF9B8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8010409C 000FF9BC  4E 80 00 20 */	blr 
+
+.global func_801040A0
+func_801040A0:
 /* 801040A0 000FF9C0  D9 CB FF 70 */	stfd f14, -0x90(r11)
 /* 801040A4 000FF9C4  D9 EB FF 78 */	stfd f15, -0x88(r11)
 /* 801040A8 000FF9C8  DA 0B FF 80 */	stfd f16, -0x80(r11)
@@ -51,6 +54,9 @@ func_801040C4:
 /* 801040E0 000FFA00  DB CB FF F0 */	stfd f30, -0x10(r11)
 /* 801040E4 000FFA04  DB EB FF F8 */	stfd f31, -8(r11)
 /* 801040E8 000FFA08  4E 80 00 20 */	blr 
+
+.global func_801040EC
+func_801040EC:
 /* 801040EC 000FFA0C  C9 CB FF 70 */	lfd f14, -0x90(r11)
 /* 801040F0 000FFA10  C9 EB FF 78 */	lfd f15, -0x88(r11)
 /* 801040F4 000FFA14  CA 0B FF 80 */	lfd f16, -0x80(r11)
@@ -630,9 +636,7 @@ lbl_80104758:
 .section .rodata, "wa"  # 0x802DDDD0 - 0x802E4A88
 
 .global lbl_802DDED0
-
 lbl_802DDED0:
-
 	# ROM: 0x2D9FD0
 	.4byte 0
 	.4byte 0

@@ -1,10 +1,10 @@
 .include "macros.inc"
+# is this the correct file?
 
 .section .sdata, "wa"  # 0x8031FA98 - 0x8031FFD8
-# is this the correct file?
 .global lbl_8031FC28
 lbl_8031FC28:
-	.4byte 0x802DDE68  ;# ptr
+	.4byte lbl_802DDE68
 	.4byte 0
 
 

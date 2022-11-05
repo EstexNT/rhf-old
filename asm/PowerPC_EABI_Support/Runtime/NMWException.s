@@ -1,52 +1,63 @@
 .include "macros.inc"
 
 .section extab_, "wa"  # 0x80006720 - 0x80006A60
+
 .global lbl_80006720
 lbl_80006720:
-
 	# ROM: 0x1F2E00
 	.4byte 0x28080000
 	.4byte 0x00000070
 	.4byte 0x00000010
 	.4byte 0
 	.4byte 0x82000008
-	.4byte 0x80103A8C  ;# ptr
+	.4byte func_80103A8C
 
+.global lbl_80006738
+lbl_80006738:
 	.4byte 0x18080000
 	.4byte 0
+
+.global lbl_80006740
+lbl_80006740:
 	.4byte 0x20080000
 	.4byte 0x0000005C
 	.4byte 0x00000010
 	.4byte 0
 	.4byte 0x82000008
-	.4byte 0x80103A8C  ;# ptr
+	.4byte func_80103A8C
 	
+.global lbl_80006758
+lbl_80006758:
 	.4byte 0x20080000
 	.4byte 0
+
+.global lbl_80006760
+lbl_80006760:
 	.4byte 0x30080000
 	.4byte 0
 
 
 
 .section extabindex_, "wa"  # 0x80006A60 - 0x80006F00
-	.global lbl_80006A60
-	lbl_80006A60:
+
+.global lbl_80006A60
+lbl_80006A60:
 	# ROM: 0x1F3140
-	.4byte 0x80103988  ;# ptr
+	.4byte func_80103988
 	.4byte 0x00000104
-	.4byte 0x80006720  ;# ptr
-	.4byte 0x80103A8C  ;# ptr
+	.4byte lbl_80006720
+	.4byte func_80103A8C
 	.4byte 0x000000BC
-	.4byte 0x80006738  ;# ptr
-	.4byte 0x80103B48  ;# ptr
+	.4byte lbl_80006738
+	.4byte func_80103B48
 	.4byte 0x000000F8
-	.4byte 0x80006740  ;# ptr
-	.4byte 0x80103C40  ;# ptr
+	.4byte lbl_80006740
+	.4byte func_80103C40
 	.4byte 0x00000078
-	.4byte 0x80006758  ;# ptr
-	.4byte 0x80103CB8  ;# ptr
+	.4byte lbl_80006758
+	.4byte func_80103CB8
 	.4byte 0x00000080
-	.4byte 0x80006760  ;# ptr
+	.4byte lbl_80006760
 
 
 
@@ -302,6 +313,9 @@ lbl_80103A74:
 /* 80103A80 000FF3A0  7C 08 03 A6 */	mtlr r0
 /* 80103A84 000FF3A4  38 21 00 40 */	addi r1, r1, 0x40
 /* 80103A88 000FF3A8  4E 80 00 20 */	blr 
+
+.global func_80103A8C
+func_80103A8C:
 /* 80103A8C 000FF3AC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80103A90 000FF3B0  7C 08 02 A6 */	mflr r0
 /* 80103A94 000FF3B4  2C 03 00 00 */	cmpwi r3, 0
@@ -503,9 +517,7 @@ lbl_80103D24:
 .section .sdata, "wa"  # 0x8031FA98 - 0x8031FFD8
 
 .global lbl_8031FC30
-
 lbl_8031FC30:
-
 	# ROM: 0x31BD30
-	.4byte 0x80103744  ;# ptr
+	.4byte func_80103744
 	.4byte 0

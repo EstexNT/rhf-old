@@ -6,6 +6,9 @@
 lbl_80006768:
 	.4byte 0x08080000
 	.4byte 0
+
+.global lbl_80006770
+lbl_80006770:
 	.4byte 0x08080000
 	.4byte 0
 
@@ -15,12 +18,12 @@ lbl_80006768:
 
 .global lbl_80006A9C
 lbl_80006A9C:
-	.4byte 0x80103D9C  ;# ptr
+	.4byte func_80103D9C
 	.4byte 0x0000025C
-	.4byte 0x80006768  ;# ptr
-	.4byte 0x80103FF8  ;# ptr
+	.4byte lbl_80006768
+	.4byte func_80103FF8
 	.4byte 0x00000040
-	.4byte 0x80006770  ;# ptr
+	.4byte lbl_80006770
 
 
 
@@ -192,12 +195,12 @@ lbl_80103FB0:
 /* 80103FB8 000FF8D8  3C 80 80 30 */	lis r4, lbl_803057B0@ha
 /* 80103FBC 000FF8DC  3C 60 80 2E */	lis r3, lbl_802DDE88@ha
 /* 80103FC0 000FF8E0  38 84 57 B0 */	addi r4, r4, lbl_803057B0@l
-/* 80103FC4 000FF8E4  3C A0 80 10 */	lis r5, lbl_80103FF8@ha
+/* 80103FC4 000FF8E4  3C A0 80 10 */	lis r5, func_80103FF8@ha
 /* 80103FC8 000FF8E8  38 63 DE 88 */	addi r3, r3, lbl_802DDE88@l
 /* 80103FCC 000FF8EC  90 81 00 08 */	stw r4, 8(r1)
 /* 80103FD0 000FF8F0  38 63 00 27 */	addi r3, r3, 0x27
 /* 80103FD4 000FF8F4  38 81 00 08 */	addi r4, r1, 8
-/* 80103FD8 000FF8F8  38 A5 3F F8 */	addi r5, r5, lbl_80103FF8@l
+/* 80103FD8 000FF8F8  38 A5 3F F8 */	addi r5, r5, func_80103FF8@l
 /* 80103FDC 000FF8FC  48 00 1B CD */	bl func_80105BA8
 lbl_80103FE0:
 /* 80103FE0 000FF900  38 60 00 00 */	li r3, 0
@@ -207,7 +210,9 @@ lbl_80103FE4:
 /* 80103FEC 000FF90C  7C 08 03 A6 */	mtlr r0
 /* 80103FF0 000FF910  38 21 00 20 */	addi r1, r1, 0x20
 /* 80103FF4 000FF914  4E 80 00 20 */	blr 
-lbl_80103FF8:
+
+.global func_80103FF8
+func_80103FF8:
 /* 80103FF8 000FF918  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80103FFC 000FF91C  7C 08 02 A6 */	mflr r0
 /* 80104000 000FF920  2C 03 00 00 */	cmpwi r3, 0
@@ -225,6 +230,9 @@ lbl_80104020:
 /* 8010402C 000FF94C  7C 08 03 A6 */	mtlr r0
 /* 80104030 000FF950  38 21 00 10 */	addi r1, r1, 0x10
 /* 80104034 000FF954  4E 80 00 20 */	blr 
+
+.global func_80104038
+func_80104038:
 /* 80104038 000FF958  3C 60 80 2E */	lis r3, lbl_802E57E0@ha
 /* 8010403C 000FF95C  38 63 57 E0 */	addi r3, r3, lbl_802E57E0@l
 /* 80104040 000FF960  4E 80 00 20 */	blr 
@@ -258,11 +266,14 @@ lbl_802DDE88:
 lbl_803057B0:
 
 	# ROM: 0x3018B0
-	.4byte 0x8031FC38  ;# ptr
+	.4byte lbl_8031FC38
 	.4byte 0
-	.4byte 0x80103FF8  ;# ptr
-	.4byte 0x80104038  ;# ptr
-	.4byte 0x8031FC28  ;# ptr
+	.4byte func_80103FF8
+	.4byte func_80104038
+
+.global lbl_803057C0
+lbl_803057C0:
+	.4byte lbl_8031FC28
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -273,5 +284,5 @@ lbl_803057B0:
 
 .global lbl_8031FC38
 lbl_8031FC38:
-	.4byte 0x802DDE78  ;# ptr
-	.4byte 0x803057C0  ;# ptr
+	.4byte lbl_802DDE78
+	.4byte lbl_803057C0
