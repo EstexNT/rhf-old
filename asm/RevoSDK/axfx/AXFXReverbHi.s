@@ -45,8 +45,8 @@ func_800F9D50:
 /* 800F9D70 000F5690  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global lbl_800F9D80
-lbl_800F9D80:
+.global func_800F9D80
+func_800F9D80:
 /* 800F9D80 000F56A0  48 00 04 30 */	b func_800FA1B0
 
 

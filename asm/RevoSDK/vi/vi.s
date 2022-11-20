@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x800D8FF0 - 0x801D3284
 
 .balign 16, 0
-.global lbl_800F0140
-lbl_800F0140:
+.global func_800F0140
+func_800F0140:
 /* 800F0140 000EBA60  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 800F0144 000EBA64  7C 08 02 A6 */	mflr r0
 /* 800F0148 000EBA68  90 01 00 24 */	stw r0, 0x24(r1)
@@ -119,8 +119,8 @@ lbl_800F02C0:
 /* 800F02D4 000EBBF4  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global lbl_800F02E0
-lbl_800F02E0:
+.global func_800F02E0
+func_800F02E0:
 /* 800F02E0 000EBC00  94 21 FD 10 */	stwu r1, -0x2f0(r1)
 /* 800F02E4 000EBC04  7C 08 02 A6 */	mflr r0
 /* 800F02E8 000EBC08  90 01 02 F4 */	stw r0, 0x2f4(r1)
@@ -1256,9 +1256,9 @@ lbl_800F11BC:
 /* 800F12CC 000ECBEC  93 A4 00 44 */	stw r29, 0x44(r4)
 /* 800F12D0 000ECBF0  4B FF 17 A1 */	bl func_800E2A70
 /* 800F12D4 000ECBF4  3C A0 CC 00 */	lis r5, 0xCC002030@ha
-/* 800F12D8 000ECBF8  3C 80 80 0F */	lis r4, lbl_800F02E0@ha
+/* 800F12D8 000ECBF8  3C 80 80 0F */	lis r4, func_800F02E0@ha
 /* 800F12DC 000ECBFC  A0 05 20 30 */	lhz r0, 0xCC002030@l(r5)
-/* 800F12E0 000ECC00  38 84 02 E0 */	addi r4, r4, lbl_800F02E0@l
+/* 800F12E0 000ECC00  38 84 02 E0 */	addi r4, r4, func_800F02E0@l
 /* 800F12E4 000ECC04  38 60 00 18 */	li r3, 0x18
 /* 800F12E8 000ECC08  54 00 04 7E */	clrlwi r0, r0, 0x11
 /* 800F12EC 000ECC0C  B0 05 20 30 */	sth r0, 0x2030(r5)
@@ -2863,8 +2863,8 @@ lbl_800F29D8:
 /* 800F29E0 000EE300  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global lbl_800F29F0
-lbl_800F29F0:
+.global func_800F29F0
+func_800F29F0:
 /* 800F29F0 000EE310  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800F29F4 000EE314  7C 08 02 A6 */	mflr r0
 /* 800F29F8 000EE318  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3159,7 +3159,7 @@ lbl_80301134:
 lbl_80301220:
 
 	# ROM: 0x2FD320
-	.4byte lbl_800F0140
+	.4byte func_800F0140
 	.4byte 0x0000007F
 	.4byte 0
 	.4byte 0

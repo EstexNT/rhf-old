@@ -200,8 +200,8 @@ func_800FFF10:
 /* 800FFF1C 000FB83C  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global lbl_800FFF20
-lbl_800FFF20:
+.global func_800FFF20
+func_800FFF20:
 /* 800FFF20 000FB840  C0 03 00 28 */	lfs f0, 0x28(r3)
 /* 800FFF24 000FB844  D0 04 00 00 */	stfs f0, 0(r4)
 /* 800FFF28 000FB848  C0 03 00 2C */	lfs f0, 0x2c(r3)
@@ -222,8 +222,8 @@ func_800FFF40:
 /* 800FFF58 000FB878  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global lbl_800FFF60
-lbl_800FFF60:
+.global func_800FFF60
+func_800FFF60:
 /* 800FFF60 000FB880  C0 03 00 34 */	lfs f0, 0x34(r3)
 /* 800FFF64 000FB884  C0 23 00 38 */	lfs f1, 0x38(r3)
 /* 800FFF68 000FB888  FC 40 00 50 */	fneg f2, f0

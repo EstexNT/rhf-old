@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x800D8FF0 - 0x801D3284
 
 .balign 16, 0
-.global lbl_800FB0E0
-lbl_800FB0E0:
+.global func_800FB0E0
+func_800FB0E0:
 /* 800FB0E0 000F6A00  94 21 FD 20 */	stwu r1, -0x2e0(r1)
 /* 800FB0E4 000F6A04  7C 08 02 A6 */	mflr r0
 /* 800FB0E8 000F6A08  3C C0 CC 00 */	lis r6, 0xCC00500A@ha

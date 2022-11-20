@@ -56,8 +56,8 @@ lbl_800DAE48:
 /* 800DAE4C 000D676C  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global lbl_800DAE50
-lbl_800DAE50:
+.global func_800DAE50
+func_800DAE50:
 /* 800DAE50 000D6770  1C 63 00 0C */	mulli r3, r3, 0xc
 /* 800DAE54 000D6774  80 AD 97 8C */	lwz r5, lbl_8032064C-_SDA_BASE_(r13)
 /* 800DAE58 000D6778  38 04 00 3F */	addi r0, r4, 0x3f

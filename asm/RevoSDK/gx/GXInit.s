@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x800D8FF0 - 0x801D3284
 
 .balign 16, 0
-.global lbl_800FB980
-lbl_800FB980:
+.global func_800FB980
+func_800FB980:
 /* 800FB980 000F72A0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 800FB984 000F72A4  7C 08 02 A6 */	mflr r0
 /* 800FB988 000F72A8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -69,8 +69,8 @@ lbl_800FBA48:
 /* 800FBA60 000F7380  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global lbl_800FBA70
-lbl_800FBA70:
+.global func_800FBA70
+func_800FBA70:
 /* 800FBA70 000F7390  28 03 00 14 */	cmplwi r3, 0x14
 /* 800FBA74 000F7394  41 80 00 0C */	blt lbl_800FBA80
 /* 800FBA78 000F7398  38 60 00 00 */	li r3, 0
@@ -83,8 +83,8 @@ lbl_800FBA80:
 /* 800FBA90 000F73B0  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global lbl_800FBAA0
-lbl_800FBAA0:
+.global func_800FBAA0
+func_800FBAA0:
 /* 800FBAA0 000F73C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800FBAA4 000F73C4  7C 08 02 A6 */	mflr r0
 /* 800FBAA8 000F73C8  2C 03 00 00 */	cmpwi r3, 0
@@ -861,11 +861,11 @@ lbl_800FC410:
 /* 800FC634 000F7F54  38 60 00 05 */	li r3, 5
 /* 800FC638 000F7F58  48 00 3A C9 */	bl func_80100100
 /* 800FC63C 000F7F5C  48 00 47 B5 */	bl func_80100DF0
-/* 800FC640 000F7F60  3C 60 80 10 */	lis r3, lbl_800FB980@ha
-/* 800FC644 000F7F64  38 63 B9 80 */	addi r3, r3, lbl_800FB980@l
+/* 800FC640 000F7F60  3C 60 80 10 */	lis r3, func_800FB980@ha
+/* 800FC644 000F7F64  38 63 B9 80 */	addi r3, r3, func_800FB980@l
 /* 800FC648 000F7F68  48 00 47 F9 */	bl func_80100E40
-/* 800FC64C 000F7F6C  3C 60 80 10 */	lis r3, lbl_800FBA70@ha
-/* 800FC650 000F7F70  38 63 BA 70 */	addi r3, r3, lbl_800FBA70@l
+/* 800FC64C 000F7F6C  3C 60 80 10 */	lis r3, func_800FBA70@ha
+/* 800FC650 000F7F70  38 63 BA 70 */	addi r3, r3, func_800FBA70@l
 /* 800FC654 000F7F74  48 00 48 0D */	bl func_80100E60
 /* 800FC658 000F7F78  38 61 00 20 */	addi r3, r1, 0x20
 /* 800FC65C 000F7F7C  38 9C 00 60 */	addi r4, r28, 0x60
@@ -1323,7 +1323,7 @@ lbl_803050D0:
 lbl_80305190:
 
 	# ROM: 0x301290
-	.4byte lbl_800FBAA0
+	.4byte func_800FBAA0
 	.4byte 0x0000007F
 	.4byte 0
 	.4byte 0

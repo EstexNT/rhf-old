@@ -102,8 +102,8 @@ func_800ED7C0:
 /* 800ED7D0 000E90F0  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global lbl_800ED7E0
-lbl_800ED7E0:
+.global func_800ED7E0
+func_800ED7E0:
 /* 800ED7E0 000E9100  81 8D 99 48 */	lwz r12, lbl_80320808-_SDA_BASE_(r13)
 /* 800ED7E4 000E9104  2C 0C 00 00 */	cmpwi r12, 0
 /* 800ED7E8 000E9108  4D 82 00 20 */	beqlr 

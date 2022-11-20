@@ -3,15 +3,15 @@
 .section .text, "ax"  # 0x800D8FF0 - 0x801D3284
 
 .balign 16, 0
-.global lbl_800FADE0
-lbl_800FADE0:
+.global func_800FADE0
+func_800FADE0:
 /* 800FADE0 000F6700  7C 64 1B 78 */	mr r4, r3
 /* 800FADE4 000F6704  80 6D 8B D8 */	lwz r3, lbl_8031FA98-_SDA_BASE_(r13)
-/* 800FADE8 000F6708  4B FE 00 68 */	b lbl_800DAE50
+/* 800FADE8 000F6708  4B FE 00 68 */	b func_800DAE50
 
 .balign 16, 0
-.global lbl_800FADF0
-lbl_800FADF0:
+.global func_800FADF0
+func_800FADF0:
 /* 800FADF0 000F6710  7C 64 1B 78 */	mr r4, r3
 /* 800FADF4 000F6714  80 6D 8B D8 */	lwz r3, lbl_8031FA98-_SDA_BASE_(r13)
 /* 800FADF8 000F6718  4B FE 01 58 */	b func_800DAF50
@@ -40,7 +40,7 @@ func_800FAE10:
 lbl_8031FBB8:
 
 	# ROM: 0x31BCB8
-	.4byte lbl_800FADE0 
+	.4byte func_800FADE0 
 
 
 .global lbl_8031FBBC
@@ -48,4 +48,4 @@ lbl_8031FBB8:
 lbl_8031FBBC:
 
 	# ROM: 0x31BCBC
-	.4byte lbl_800FADF0 
+	.4byte func_800FADF0 

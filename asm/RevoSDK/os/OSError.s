@@ -304,8 +304,8 @@ lbl_800DC880:
 /* 800DC8A8 000D81C8  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global lbl_800DC8B0
-lbl_800DC8B0:
+.global func_800DC8B0
+func_800DC8B0:
 /* 800DC8B0 000D81D0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 800DC8B4 000D81D4  7C 08 02 A6 */	mflr r0
 /* 800DC8B8 000D81D8  90 01 00 34 */	stw r0, 0x34(r1)

@@ -1,6 +1,5 @@
-include obj_files_rvlsdk.mk
-include obj_files_mw.mk
 
+include obj_files_rvlsdk.mk
 RVL_SDK_O_FILES :=\
 	$(RVL_SDK_BASE_O_FILES) \
 	$(RVL_SDK_OS_O_FILES) \
@@ -14,6 +13,7 @@ RVL_SDK_O_FILES :=\
 	$(RVL_SDK_DSP_O_FILES) \
 	$(RVL_SDK_GX_O_FILES)
 
+include obj_files_mw.mk
 MW_O_FILES :=\
 	$(PPC_EABI_SUPPORT_RUNTIME_O_FILES)
 
