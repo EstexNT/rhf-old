@@ -39,21 +39,21 @@ lbl_800067A4:
 
 .global lbl_80006AB4
 lbl_80006AB4:
-	.4byte 0x801048DC  ;# ptr
+	.4byte func_801048DC
 	.4byte 0x000001B0
-	.4byte 0x80006778  ;# ptr
-	.4byte 0x80104A8C  ;# ptr
+	.4byte lbl_80006778
+	.4byte func_80104A8C
 	.4byte 0x000001B0
-	.4byte 0x80006780  ;# ptr
-	.4byte 0x80104C3C  ;# ptr
+	.4byte lbl_80006780
+	.4byte func_80104C3C
 	.4byte 0x00000554
-	.4byte 0x80006788  ;# ptr
-	.4byte 0x80105190  ;# ptr
+	.4byte lbl_80006788
+	.4byte func_80105190
 	.4byte 0x0000050C
-	.4byte 0x80006790  ;# ptr
-	.4byte 0x801057A0  ;# ptr
+	.4byte lbl_80006790
+	.4byte func_801057A0
 	.4byte 0x00000408
-	.4byte 0x800067A4  ;# ptr
+	.4byte lbl_800067A4
 
 
 
