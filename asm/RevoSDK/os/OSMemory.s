@@ -536,7 +536,6 @@ lbl_800E0FA4:
 /* 800E0FB0 000DC8D0  7C 08 03 A6 */	mtlr r0
 /* 800E0FB4 000DC8D4  38 21 00 10 */	addi r1, r1, 0x10
 /* 800E0FB8 000DC8D8  4E 80 00 20 */	blr 
-/* 800E0FBC 000DC8DC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
 
 .section .data, "wa"  # 0x802F17E0 - 0x80315F30

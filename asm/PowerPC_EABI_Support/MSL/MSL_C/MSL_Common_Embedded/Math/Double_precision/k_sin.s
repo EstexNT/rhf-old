@@ -1,0 +1,123 @@
+.include "macros.inc"
+
+.section .text, "ax"  # 0x800D8FF0 - 0x801D3284
+
+.global func_8010FA80
+func_8010FA80:
+/* 8010FA80 0010B3A0  94 21 FF E0 */	stwu r1, -0x20(r1)
+/* 8010FA84 0010B3A4  3C 00 3E 40 */	lis r0, 0x3e40
+/* 8010FA88 0010B3A8  D8 21 00 08 */	stfd f1, 8(r1)
+/* 8010FA8C 0010B3AC  80 81 00 08 */	lwz r4, 8(r1)
+/* 8010FA90 0010B3B0  54 84 00 7E */	clrlwi r4, r4, 1
+/* 8010FA94 0010B3B4  7C 04 00 00 */	cmpw r4, r0
+/* 8010FA98 0010B3B8  40 80 00 1C */	bge lbl_8010FAB4
+/* 8010FA9C 0010B3BC  FC 00 08 1E */	fctiwz f0, f1
+/* 8010FAA0 0010B3C0  D8 01 00 10 */	stfd f0, 0x10(r1)
+/* 8010FAA4 0010B3C4  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 8010FAA8 0010B3C8  2C 00 00 00 */	cmpwi r0, 0
+/* 8010FAAC 0010B3CC  40 82 00 08 */	bne lbl_8010FAB4
+/* 8010FAB0 0010B3D0  48 00 00 88 */	b lbl_8010FB38
+lbl_8010FAB4:
+/* 8010FAB4 0010B3D4  FC E1 00 72 */	fmul f7, f1, f1
+/* 8010FAB8 0010B3D8  C8 02 FD B0 */	lfd f0, lbl_80328D90-_SDA2_BASE_(r2)
+/* 8010FABC 0010B3DC  C8 A2 FD A8 */	lfd f5, lbl_80328D88-_SDA2_BASE_(r2)
+/* 8010FAC0 0010B3E0  2C 03 00 00 */	cmpwi r3, 0
+/* 8010FAC4 0010B3E4  C8 82 FD A0 */	lfd f4, lbl_80328D80-_SDA2_BASE_(r2)
+/* 8010FAC8 0010B3E8  C8 62 FD 98 */	lfd f3, lbl_80328D78-_SDA2_BASE_(r2)
+/* 8010FACC 0010B3EC  FC C0 01 F2 */	fmul f6, f0, f7
+/* 8010FAD0 0010B3F0  C8 02 FD 90 */	lfd f0, lbl_80328D70-_SDA2_BASE_(r2)
+/* 8010FAD4 0010B3F4  FD 07 00 72 */	fmul f8, f7, f1
+/* 8010FAD8 0010B3F8  FC A5 30 2A */	fadd f5, f5, f6
+/* 8010FADC 0010B3FC  FC A7 01 72 */	fmul f5, f7, f5
+/* 8010FAE0 0010B400  FC 84 28 2A */	fadd f4, f4, f5
+/* 8010FAE4 0010B404  FC 87 01 32 */	fmul f4, f7, f4
+/* 8010FAE8 0010B408  FC 63 20 2A */	fadd f3, f3, f4
+/* 8010FAEC 0010B40C  FC 67 00 F2 */	fmul f3, f7, f3
+/* 8010FAF0 0010B410  FC 00 18 2A */	fadd f0, f0, f3
+/* 8010FAF4 0010B414  40 82 00 1C */	bne lbl_8010FB10
+/* 8010FAF8 0010B418  FC 47 00 32 */	fmul f2, f7, f0
+/* 8010FAFC 0010B41C  C8 02 FD B8 */	lfd f0, lbl_80328D98-_SDA2_BASE_(r2)
+/* 8010FB00 0010B420  FC 00 10 2A */	fadd f0, f0, f2
+/* 8010FB04 0010B424  FC 08 00 32 */	fmul f0, f8, f0
+/* 8010FB08 0010B428  FC 21 00 2A */	fadd f1, f1, f0
+/* 8010FB0C 0010B42C  48 00 00 2C */	b lbl_8010FB38
+lbl_8010FB10:
+/* 8010FB10 0010B430  C8 82 FD C0 */	lfd f4, lbl_80328DA0-_SDA2_BASE_(r2)
+/* 8010FB14 0010B434  FC 68 00 32 */	fmul f3, f8, f0
+/* 8010FB18 0010B438  C8 02 FD B8 */	lfd f0, lbl_80328D98-_SDA2_BASE_(r2)
+/* 8010FB1C 0010B43C  FC 84 00 B2 */	fmul f4, f4, f2
+/* 8010FB20 0010B440  FC 00 02 32 */	fmul f0, f0, f8
+/* 8010FB24 0010B444  FC 64 18 28 */	fsub f3, f4, f3
+/* 8010FB28 0010B448  FC 67 00 F2 */	fmul f3, f7, f3
+/* 8010FB2C 0010B44C  FC 43 10 28 */	fsub f2, f3, f2
+/* 8010FB30 0010B450  FC 02 00 28 */	fsub f0, f2, f0
+/* 8010FB34 0010B454  FC 21 00 28 */	fsub f1, f1, f0
+lbl_8010FB38:
+/* 8010FB38 0010B458  38 21 00 20 */	addi r1, r1, 0x20
+/* 8010FB3C 0010B45C  4E 80 00 20 */	blr 
+
+
+
+.section .sdata2, "wa"  # 0x80328848 - 0x80329520
+
+.global lbl_80328D70
+
+lbl_80328D70:
+
+	# ROM: 0x323FD0
+	.4byte 0x3F811111
+	.4byte 0x1110F8A6
+
+
+.global lbl_80328D78
+
+lbl_80328D78:
+
+	# ROM: 0x323FD8
+	.4byte 0xBF2A01A0
+	.4byte 0x19C161D5
+
+
+.global lbl_80328D80
+
+lbl_80328D80:
+
+	# ROM: 0x323FE0
+	.4byte 0x3EC71DE3
+	.4byte 0x57B1FE7D
+
+
+.global lbl_80328D88
+
+lbl_80328D88:
+
+	# ROM: 0x323FE8
+	.4byte 0xBE5AE5E6
+	.4byte 0x8A2B9CEB
+
+
+.global lbl_80328D90
+
+lbl_80328D90:
+
+	# ROM: 0x323FF0
+	.4byte 0x3DE5D93A
+	.4byte 0x5ACFD57C
+
+
+.global lbl_80328D98
+
+lbl_80328D98:
+
+	# ROM: 0x323FF8
+	.4byte 0xBFC55555
+	.4byte 0x55555549
+
+
+.global lbl_80328DA0
+
+lbl_80328DA0:
+
+	# ROM: 0x324000
+	.4byte 0x3FE00000
+	.4byte 0

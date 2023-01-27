@@ -101,3 +101,12 @@ RVL_SDK_GX_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/gx/GXDisplayList.o \
 	$(BUILD_DIR)/asm/RevoSDK/gx/GXTransform.o \
 	$(BUILD_DIR)/asm/RevoSDK/gx/GXPerf.o 
+
+RVL_SDK_EXI_O_FILES :=\
+	$(BUILD_DIR)/asm/RevoSDK/exi/EXIBios.o \
+	$(BUILD_DIR)/asm/RevoSDK/exi/EXIUart.o \
+	$(BUILD_DIR)/asm/RevoSDK/exi/EXICommon.o 
+
+RVL_SDK_SI_O_FILES :=\
+	$(BUILD_DIR)/asm/RevoSDK/si/SIBios.o \
+	$(BUILD_DIR)/asm/RevoSDK/si/SISamplingRate.o 

@@ -23,8 +23,6 @@ func_800E4500:
 /* 800E450C 000DFE2C  80 03 31 34 */	lwz r0, 0x3134(r3)
 /* 800E4510 000DFE30  90 0D 98 08 */	stw r0, lbl_803206C8-_SDA_BASE_(r13)
 /* 800E4514 000DFE34  4E 80 00 20 */	blr 
-/* 800E4518 000DFE38  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800E451C 000DFE3C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
 
 .section .sdata, "wa"  # 0x8031FA98 - 0x8031FFD8

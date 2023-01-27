@@ -1,3 +1,4 @@
+# RVL SDK, Metrowerks libraries are split into several parts for whatever reason
 
 include obj_files_rvlsdk.mk
 RVL_SDK_O_FILES :=\
@@ -13,9 +14,19 @@ RVL_SDK_O_FILES :=\
 	$(RVL_SDK_DSP_O_FILES) \
 	$(RVL_SDK_GX_O_FILES)
 
+RVL_SDK_1_O_FILES :=\
+	$(RVL_SDK_EXI_O_FILES) \
+	$(RVL_SDK_SI_O_FILES)
+	
+
 include obj_files_mw.mk
 MW_O_FILES :=\
-	$(PPC_EABI_SUPPORT_RUNTIME_O_FILES)
+	$(PPC_EABI_SUPPORT_RUNTIME_O_FILES) \
+	$(PPC_EABI_SUPPORT_MSL_C_O_FILES)
+
+MW_1_O_FILES :=\
+	$(PPC_EABI_SUPPORT_METROTRK_O_FILES)
+
 
 INIT_O_FILES :=\
 	$(BUILD_DIR)/asm/init.o

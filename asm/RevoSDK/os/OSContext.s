@@ -622,8 +622,6 @@ func_800DC420:
 /* 800DC44C 000D7D6C  7C 08 03 A6 */	mtlr r0
 /* 800DC450 000D7D70  38 21 00 10 */	addi r1, r1, 0x10
 /* 800DC454 000D7D74  4E 80 00 20 */	blr 
-/* 800DC458 000D7D78  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800DC45C 000D7D7C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
 
 .section .data, "wa"  # 0x802F17E0 - 0x80315F30
