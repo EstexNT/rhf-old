@@ -3,7 +3,7 @@ build/
 *.elf
 *.o
 *.map
-
+*.py
 *.exe
 
 tools/elf2dol
@@ -13,3 +13,5 @@ tools/deincbin.py
 tools/deinc.bat
 
 tools/mwcc_compiler/
+
+.vscode/

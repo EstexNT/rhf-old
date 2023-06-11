@@ -1,0 +1,113 @@
+.include "macros.inc"
+
+.section .text, "ax"  # 0x800D8FF0 - 0x801D3284
+
+.balign 16, 0
+.global func_800E6500
+func_800E6500:
+/* 800E6500 000E1E20  2C 04 00 00 */	cmpwi r4, 0
+/* 800E6504 000E1E24  3C E0 80 2E */	lis r7, lbl_802DDDD0@ha
+/* 800E6508 000E1E28  39 00 FF FF */	li r8, -1
+/* 800E650C 000E1E2C  38 E7 DD D0 */	addi r7, r7, lbl_802DDDD0@l
+/* 800E6510 000E1E30  41 82 01 1C */	beq lbl_800E662C
+/* 800E6514 000E1E34  54 80 F0 BF */	rlwinm. r0, r4, 0x1e, 2, 0x1f
+/* 800E6518 000E1E38  7C 09 03 A6 */	mtctr r0
+/* 800E651C 000E1E3C  41 82 00 D4 */	beq lbl_800E65F0
+lbl_800E6520:
+/* 800E6520 000E1E40  89 23 00 00 */	lbz r9, 0(r3)
+/* 800E6524 000E1E44  55 06 E1 3E */	srwi r6, r8, 4
+/* 800E6528 000E1E48  7D 00 4A 78 */	xor r0, r8, r9
+/* 800E652C 000E1E4C  55 25 E1 3E */	srwi r5, r9, 4
+/* 800E6530 000E1E50  54 00 16 BA */	rlwinm r0, r0, 2, 0x1a, 0x1d
+/* 800E6534 000E1E54  89 23 00 01 */	lbz r9, 1(r3)
+/* 800E6538 000E1E58  7C 07 00 2E */	lwzx r0, r7, r0
+/* 800E653C 000E1E5C  7C C6 02 78 */	xor r6, r6, r0
+/* 800E6540 000E1E60  7C C0 2A 78 */	xor r0, r6, r5
+/* 800E6544 000E1E64  55 25 E1 3E */	srwi r5, r9, 4
+/* 800E6548 000E1E68  54 00 16 BA */	rlwinm r0, r0, 2, 0x1a, 0x1d
+/* 800E654C 000E1E6C  54 C6 E1 3E */	srwi r6, r6, 4
+/* 800E6550 000E1E70  7C 07 00 2E */	lwzx r0, r7, r0
+/* 800E6554 000E1E74  7C C8 02 78 */	xor r8, r6, r0
+/* 800E6558 000E1E78  7D 00 4A 78 */	xor r0, r8, r9
+/* 800E655C 000E1E7C  89 23 00 02 */	lbz r9, 2(r3)
+/* 800E6560 000E1E80  54 00 16 BA */	rlwinm r0, r0, 2, 0x1a, 0x1d
+/* 800E6564 000E1E84  55 06 E1 3E */	srwi r6, r8, 4
+/* 800E6568 000E1E88  7C 07 00 2E */	lwzx r0, r7, r0
+/* 800E656C 000E1E8C  7C C6 02 78 */	xor r6, r6, r0
+/* 800E6570 000E1E90  7C C0 2A 78 */	xor r0, r6, r5
+/* 800E6574 000E1E94  55 25 E1 3E */	srwi r5, r9, 4
+/* 800E6578 000E1E98  54 00 16 BA */	rlwinm r0, r0, 2, 0x1a, 0x1d
+/* 800E657C 000E1E9C  54 C6 E1 3E */	srwi r6, r6, 4
+/* 800E6580 000E1EA0  7C 07 00 2E */	lwzx r0, r7, r0
+/* 800E6584 000E1EA4  7C C8 02 78 */	xor r8, r6, r0
+/* 800E6588 000E1EA8  7D 00 4A 78 */	xor r0, r8, r9
+/* 800E658C 000E1EAC  89 23 00 03 */	lbz r9, 3(r3)
+/* 800E6590 000E1EB0  54 00 16 BA */	rlwinm r0, r0, 2, 0x1a, 0x1d
+/* 800E6594 000E1EB4  55 06 E1 3E */	srwi r6, r8, 4
+/* 800E6598 000E1EB8  7C 07 00 2E */	lwzx r0, r7, r0
+/* 800E659C 000E1EBC  38 63 00 04 */	addi r3, r3, 4
+/* 800E65A0 000E1EC0  7C C6 02 78 */	xor r6, r6, r0
+/* 800E65A4 000E1EC4  7C C0 2A 78 */	xor r0, r6, r5
+/* 800E65A8 000E1EC8  55 25 E1 3E */	srwi r5, r9, 4
+/* 800E65AC 000E1ECC  54 00 16 BA */	rlwinm r0, r0, 2, 0x1a, 0x1d
+/* 800E65B0 000E1ED0  54 C6 E1 3E */	srwi r6, r6, 4
+/* 800E65B4 000E1ED4  7C 07 00 2E */	lwzx r0, r7, r0
+/* 800E65B8 000E1ED8  7C C8 02 78 */	xor r8, r6, r0
+/* 800E65BC 000E1EDC  7D 00 4A 78 */	xor r0, r8, r9
+/* 800E65C0 000E1EE0  54 00 16 BA */	rlwinm r0, r0, 2, 0x1a, 0x1d
+/* 800E65C4 000E1EE4  55 06 E1 3E */	srwi r6, r8, 4
+/* 800E65C8 000E1EE8  7C 07 00 2E */	lwzx r0, r7, r0
+/* 800E65CC 000E1EEC  7C C6 02 78 */	xor r6, r6, r0
+/* 800E65D0 000E1EF0  7C C0 2A 78 */	xor r0, r6, r5
+/* 800E65D4 000E1EF4  54 00 16 BA */	rlwinm r0, r0, 2, 0x1a, 0x1d
+/* 800E65D8 000E1EF8  54 C6 E1 3E */	srwi r6, r6, 4
+/* 800E65DC 000E1EFC  7C 07 00 2E */	lwzx r0, r7, r0
+/* 800E65E0 000E1F00  7C C8 02 78 */	xor r8, r6, r0
+/* 800E65E4 000E1F04  42 00 FF 3C */	bdnz lbl_800E6520
+/* 800E65E8 000E1F08  70 84 00 03 */	andi. r4, r4, 3
+/* 800E65EC 000E1F0C  41 82 00 40 */	beq lbl_800E662C
+lbl_800E65F0:
+/* 800E65F0 000E1F10  7C 89 03 A6 */	mtctr r4
+lbl_800E65F4:
+/* 800E65F4 000E1F14  89 23 00 00 */	lbz r9, 0(r3)
+/* 800E65F8 000E1F18  55 06 E1 3E */	srwi r6, r8, 4
+/* 800E65FC 000E1F1C  38 63 00 01 */	addi r3, r3, 1
+/* 800E6600 000E1F20  7D 00 4A 78 */	xor r0, r8, r9
+/* 800E6604 000E1F24  55 25 E1 3E */	srwi r5, r9, 4
+/* 800E6608 000E1F28  54 00 16 BA */	rlwinm r0, r0, 2, 0x1a, 0x1d
+/* 800E660C 000E1F2C  7C 07 00 2E */	lwzx r0, r7, r0
+/* 800E6610 000E1F30  7C C6 02 78 */	xor r6, r6, r0
+/* 800E6614 000E1F34  7C C0 2A 78 */	xor r0, r6, r5
+/* 800E6618 000E1F38  54 00 16 BA */	rlwinm r0, r0, 2, 0x1a, 0x1d
+/* 800E661C 000E1F3C  54 C6 E1 3E */	srwi r6, r6, 4
+/* 800E6620 000E1F40  7C 07 00 2E */	lwzx r0, r7, r0
+/* 800E6624 000E1F44  7C C8 02 78 */	xor r8, r6, r0
+/* 800E6628 000E1F48  42 00 FF CC */	bdnz lbl_800E65F4
+lbl_800E662C:
+/* 800E662C 000E1F4C  7D 03 40 F8 */	nor r3, r8, r8
+/* 800E6630 000E1F50  4E 80 00 20 */	blr 
+
+
+.section .rodata, "wa"  # 0x802DDDD0 - 0x802E4A88
+
+.global lbl_802DDDD0
+
+lbl_802DDDD0:
+
+	# ROM: 0x2D9ED0
+	.4byte 0
+	.4byte 0x1DB71064
+	.4byte 0x3B6E20C8
+	.4byte 0x26D930AC
+	.4byte 0x76DC4190
+	.4byte 0x6B6B51F4
+	.4byte 0x4DB26158
+	.4byte 0x5005713C
+	.4byte 0xEDB88320
+	.4byte 0xF00F9344
+	.4byte 0xD6D6A3E8
+	.4byte 0xCB61B38C
+	.4byte 0x9B64C2B0
+	.4byte 0x86D3D2D4
+	.4byte 0xA00AE278
+	.4byte 0xBDBDF21C

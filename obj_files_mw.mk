@@ -1,0 +1,94 @@
+PPC_EABI_SUPPORT_RUNTIME_O_FILES :=\
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/Runtime/__mem.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/Runtime/__va_arg.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/Runtime/global_destructor_chain.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/Runtime/New.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/Runtime/NMWException.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/Runtime/ptmf.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/Runtime/MWRTTI.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/Runtime/runtime.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/Runtime/__init_cpp_exceptions.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/Runtime/Gecko_ExceptionPPC.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/Runtime/GCN_mem_alloc.o 
+
+PPC_EABI_SUPPORT_MSL_C_O_FILES :=\
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common/Src/alloc.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common/Src/ansi_files.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common_Embedded/Src/ansi_fp.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common/Src/buffer_io.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common/Src/ctype.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common/Src/errno.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common/Src/locale.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common/Src/direct_io.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common/Src/file_io.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common/Src/file_pos.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common/Src/mbstring.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common/Src/mem.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common/Src/mem_funcs.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common/Src/math_api.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common/Src/misc_io.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common/Src/printf.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common/Src/float.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common/Src/scanf.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common/Src/signal.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common/Src/string.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common/Src/strtoul.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common/Src/wmem.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common/Src/wctype.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common/Src/wprintf.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common/Src/wstring.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common/Src/wchar_io.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/PPC_EABI/SRC/uart_console_io_gcn.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/PPC_EABI/SRC/abort_exit_ppc_eabi.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common/Src/secure_error.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common_Embedded/Src/math_sun.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common_Embedded/Math/Double_precision/e_atan2.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common_Embedded/Math/Double_precision/e_log.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common_Embedded/Math/Double_precision/e_log10.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common_Embedded/Math/Double_precision/e_pow.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common_Embedded/Math/Double_precision/e_rem_pio2.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common_Embedded/Math/Double_precision/k_cos.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common_Embedded/Math/Double_precision/k_rem_pio2.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common_Embedded/Math/Double_precision/k_sin.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common_Embedded/Math/Double_precision/k_tan.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common_Embedded/Math/Double_precision/s_atan.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common_Embedded/Math/Double_precision/s_copysign.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common_Embedded/Math/Double_precision/s_cos.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common_Embedded/Math/Double_precision/s_floor.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common_Embedded/Math/Double_precision/s_frexp.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common_Embedded/Math/Double_precision/s_ldexp.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common_Embedded/Math/Double_precision/s_sin.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common_Embedded/Math/Double_precision/s_tan.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common_Embedded/Math/Double_precision/w_atan2.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common_Embedded/Math/Double_precision/w_log10.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common_Embedded/Math/Double_precision/w_pow.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common_Embedded/Math/Double_precision/e_sqrt.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common_Embedded/Math/Double_precision/w_sqrt.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common/Src/extras.o
+
+PPC_EABI_SUPPORT_METROTRK_O_FILES :=\
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/targsupp.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/custconn/cc_gdev.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/custconn/MWCriticalSection_gc.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/custconn/CircleBuffer.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/flush_cache.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/main_TRK.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/mainloop.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/mem_TRK.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/dispatch.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/dolphin_trk.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/dolphin_trk_glue.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/notify.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/nubevent.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/nubinit.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/serpoll.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/string_TRK.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/support.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/targcont.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/mpc_7xx_603e.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/msg.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/msgbuf.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/msghndlr.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/mslsupp.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/targimpl.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/target_options.o 

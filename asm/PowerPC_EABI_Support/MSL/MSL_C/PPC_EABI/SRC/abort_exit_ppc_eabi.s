@@ -1,0 +1,30 @@
+.include "macros.inc"
+
+.section .text, "ax"  # 0x800D8FF0 - 0x801D3284
+
+.global lbl_8010D074
+lbl_8010D074:
+/* 8010D074 00108994  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 8010D078 00108998  7C 08 02 A6 */	mflr r0
+/* 8010D07C 0010899C  38 60 00 01 */	li r3, 1
+/* 8010D080 001089A0  90 01 00 14 */	stw r0, 0x14(r1)
+/* 8010D084 001089A4  4B FF D1 5D */	bl func_8010A1E0
+/* 8010D088 001089A8  38 00 00 01 */	li r0, 1
+/* 8010D08C 001089AC  90 0D 9C A0 */	stw r0, lbl_80320B60-_SDA_BASE_(r13)
+/* 8010D090 001089B0  38 60 00 01 */	li r3, 1
+/* 8010D094 001089B4  4B FD 98 2D */	bl func_800E68C0
+/* 8010D098 001089B8  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 8010D09C 001089BC  7C 08 03 A6 */	mtlr r0
+/* 8010D0A0 001089C0  38 21 00 10 */	addi r1, r1, 0x10
+/* 8010D0A4 001089C4  4E 80 00 20 */	blr 
+
+
+
+.section .sbss, "wa"  # 0x803205F0 - 0x80320F80
+
+.global lbl_80320B60
+lbl_80320B60:
+	.skip 0x4
+.global lbl_80320B64
+lbl_80320B64:
+	.skip 0x4

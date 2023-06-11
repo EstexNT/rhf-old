@@ -4,7 +4,7 @@ Code sections:
     .text:       0x00002820  0x80006F00  0x801F74E0
 Other sections:
     .extab: 	 0x001F2E00  0x80006720  0x80006A60
-    .extabindex  0x001F3140  0x80006A60  0x80006F00
+    .extabindex: 0x001F3140  0x80006A60  0x80006F00
     .ctors:      0x001F35E0  0x801F74E0  0x801F7580
     .dtors:      0x001F3680  0x801F7580  0x801F75A0
     .rodata:     0x001F36A0  0x801F75A0  0x802E5740
@@ -17,6 +17,7 @@ Other sections:
 Entry Point: 0x80004050
 
 _stack_addr: 0x803E5D88
+_db_stack_addr: 0x803E7D88
 
 */
 

@@ -1,0 +1,21 @@
+.include "macros.inc"
+
+.section .text, "ax"  # 0x800D8FF0 - 0x801D3284
+
+.global func_801141F8
+func_801141F8:
+/* 801141F8 0010FB18  3C A0 FF FF */	lis r5, 0xFFFFFFF1@h
+/* 801141FC 0010FB1C  60 A5 FF F1 */	ori r5, r5, 0xFFFFFFF1@l
+/* 80114200 0010FB20  7C A5 18 38 */	and r5, r5, r3
+/* 80114204 0010FB24  7C 65 18 50 */	subf r3, r5, r3
+/* 80114208 0010FB28  7C 84 1A 14 */	add r4, r4, r3
+lbl_8011420C:
+/* 8011420C 0010FB2C  7C 00 28 6C */	dcbst 0, r5
+/* 80114210 0010FB30  7C 00 28 AC */	dcbf 0, r5
+/* 80114214 0010FB34  7C 00 04 AC */	sync 0
+/* 80114218 0010FB38  7C 00 2F AC */	icbi 0, r5
+/* 8011421C 0010FB3C  30 A5 00 08 */	addic r5, r5, 8
+/* 80114220 0010FB40  34 84 FF F8 */	addic. r4, r4, -8
+/* 80114224 0010FB44  40 80 FF E8 */	bge lbl_8011420C
+/* 80114228 0010FB48  4C 00 01 2C */	isync 
+/* 8011422C 0010FB4C  4E 80 00 20 */	blr 

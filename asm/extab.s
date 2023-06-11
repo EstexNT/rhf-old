@@ -1,50 +1,9 @@
 .include "macros.inc"
 
 .section extab_, "wa"  # 0x80006720 - 0x80006A60
-.global lbl_80006720
-lbl_80006720:
 
-	# ROM: 0x1F2E00
-	.4byte 0x28080000
-	.4byte 0x00000070
-	.4byte 0x00000010
-	.4byte 0
-	.4byte 0x82000008
-	.4byte 0x80103A8C  ;# ptr
-
-	.4byte 0x18080000
-	.4byte 0
-	.4byte 0x20080000
-	.4byte 0x0000005C
-	.4byte 0x00000010
-	.4byte 0
-	.4byte 0x82000008
-	.4byte 0x80103A8C  ;# ptr
-	
-	.4byte 0x20080000
-	.4byte 0
-	.4byte 0x30080000
-	.4byte 0
-	.4byte 0x08080000
-	.4byte 0
-	.4byte 0x08080000
-	.4byte 0
-	.4byte 0x10080000
-	.4byte 0
-	.4byte 0x10080000
-	.4byte 0
-	.4byte 0x280A0000
-	.4byte 0
-	.4byte 0x50080000
-	.4byte 0x00000054
-	.4byte 0x01250010
-	.4byte 0
-	.4byte 0x8E000000
-	.4byte 0x28080000
-	.4byte 0x00000274
-	.4byte 0x000F0010
-	.4byte 0
-	.4byte 0x8E000000
+.global lbl_800067B8
+lbl_800067B8:
 	.4byte 0x28080000
 	.4byte 0
 	.4byte 0x00080000

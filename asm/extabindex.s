@@ -1,45 +1,9 @@
 .include "macros.inc"
 
 .section extabindex_, "wa"  # 0x80006A60 - 0x80006F00
-	.global lbl_80006A60
-	lbl_80006A60:
-	# ROM: 0x1F3140
-	.4byte 0x80103988  ;# ptr
-	.4byte 0x00000104
-	.4byte 0x80006720  ;# ptr
-	.4byte 0x80103A8C  ;# ptr
-	.4byte 0x000000BC
-	.4byte 0x80006738  ;# ptr
-	.4byte 0x80103B48  ;# ptr
-	.4byte 0x000000F8
-	.4byte 0x80006740  ;# ptr
-	.4byte 0x80103C40  ;# ptr
-	.4byte 0x00000078
-	.4byte 0x80006758  ;# ptr
-	.4byte 0x80103CB8  ;# ptr
-	.4byte 0x00000080
-	.4byte 0x80006760  ;# ptr
-	.4byte 0x80103D9C  ;# ptr
-	.4byte 0x0000025C
-	.4byte 0x80006768  ;# ptr
-	.4byte 0x80103FF8  ;# ptr
-	.4byte 0x00000040
-	.4byte 0x80006770  ;# ptr
-	.4byte 0x801048DC  ;# ptr
-	.4byte 0x000001B0
-	.4byte 0x80006778  ;# ptr
-	.4byte 0x80104A8C  ;# ptr
-	.4byte 0x000001B0
-	.4byte 0x80006780  ;# ptr
-	.4byte 0x80104C3C  ;# ptr
-	.4byte 0x00000554
-	.4byte 0x80006788  ;# ptr
-	.4byte 0x80105190  ;# ptr
-	.4byte 0x0000050C
-	.4byte 0x80006790  ;# ptr
-	.4byte 0x801057A0  ;# ptr
-	.4byte 0x00000408
-	.4byte 0x800067A4  ;# ptr
+
+.global lbl_80006AF0
+lbl_80006AF0:
 	.4byte 0x801EDA50  ;# ptr
 	.4byte 0x00000394
 	.4byte 0x800067B8  ;# ptr
