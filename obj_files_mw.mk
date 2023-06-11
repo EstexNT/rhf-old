@@ -65,3 +65,30 @@ PPC_EABI_SUPPORT_MSL_C_O_FILES :=\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common_Embedded/Math/Double_precision/e_sqrt.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common_Embedded/Math/Double_precision/w_sqrt.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common/Src/extras.o
+
+PPC_EABI_SUPPORT_METROTRK_O_FILES :=\
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/targsupp.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/custconn/cc_gdev.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/custconn/MWCriticalSection_gc.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/custconn/CircleBuffer.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/flush_cache.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/main_TRK.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/mainloop.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/mem_TRK.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/dispatch.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/dolphin_trk.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/dolphin_trk_glue.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/notify.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/nubevent.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/nubinit.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/serpoll.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/string_TRK.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/support.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/targcont.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/mpc_7xx_603e.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/msg.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/msgbuf.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/msghndlr.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/mslsupp.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/targimpl.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/target_options.o 

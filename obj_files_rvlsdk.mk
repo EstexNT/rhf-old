@@ -110,3 +110,61 @@ RVL_SDK_EXI_O_FILES :=\
 RVL_SDK_SI_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/si/SIBios.o \
 	$(BUILD_DIR)/asm/RevoSDK/si/SISamplingRate.o 
+
+RVL_SDK_MEM_O_FILES :=\
+	$(BUILD_DIR)/asm/RevoSDK/mem/mem_heapCommon.o \
+	$(BUILD_DIR)/asm/RevoSDK/mem/mem_expHeap.o \
+	$(BUILD_DIR)/asm/RevoSDK/mem/mem_frameHeap.o \
+	$(BUILD_DIR)/asm/RevoSDK/mem/mem_allocator.o \
+	$(BUILD_DIR)/asm/RevoSDK/mem/mem_list.o 
+
+RVL_SDK_EUART_O_FILES :=\
+	$(BUILD_DIR)/asm/RevoSDK/euart/euart.o
+
+RVL_SDK_FS_O_FILES :=\
+	$(BUILD_DIR)/asm/RevoSDK/fs/fs.o
+
+RVL_SDK_IPC_O_FILES :=\
+	$(BUILD_DIR)/asm/RevoSDK/ipc/ipcMain.o \
+	$(BUILD_DIR)/asm/RevoSDK/ipc/ipcclt.o \
+	$(BUILD_DIR)/asm/RevoSDK/ipc/memory.o \
+	$(BUILD_DIR)/asm/RevoSDK/ipc/ipcProfile.o 
+
+# cleanup
+RVL_SDK_NAND_O_FILES :=\
+	$(BUILD_DIR)/asm/RevoSDK/nand/nand.o \
+	$(BUILD_DIR)/asm/RevoSDK/nand/NANDOpenClose.o \
+	$(BUILD_DIR)/asm/RevoSDK/nand/NANDCore.o \
+	$(BUILD_DIR)/asm/RevoSDK/nand/NANDCheck.o \
+	$(BUILD_DIR)/asm/RevoSDK/nand/NANDLogging.o \
+	$(BUILD_DIR)/asm/RevoSDK/nand/NANDErrorMessage.o 
+
+# cleanup
+RVL_SDK_SC_O_FILES :=\
+	$(BUILD_DIR)/asm/RevoSDK/sc/scsystem.o \
+	$(BUILD_DIR)/asm/RevoSDK/sc/scapi.o \
+	$(BUILD_DIR)/asm/RevoSDK/sc/scapi_prdinfo.o 
+
+# cleanup 
+RVL_SDK_WENC_O_FILES :=\
+	$(BUILD_DIR)/asm/RevoSDK/wenc/wenc.o 
+
+# cleanup
+RVL_SDK_ARC_O_FILES :=\
+	$(BUILD_DIR)/asm/RevoSDK/arc/arc.o 
+
+# cleanup
+RVL_SDK_CX_O_FILES :=\
+	$(BUILD_DIR)/asm/RevoSDK/cx/CXStreamingUncompression.o \
+	$(BUILD_DIR)/asm/RevoSDK/cx/CXUncompression.o \
+	$(BUILD_DIR)/asm/RevoSDK/cx/CXSecureUncompression.o 
+
+# cleanup
+RVL_SDK_WPAD_O_FILES :=\
+	$(BUILD_DIR)/asm/RevoSDK/wpad/WPAD.o \
+	$(BUILD_DIR)/asm/RevoSDK/wpad/WPADHIDParser.o \
+	$(BUILD_DIR)/asm/RevoSDK/wpad/WPADEncrypt.o \
+	$(BUILD_DIR)/asm/RevoSDK/wpad/WPADMem.o \
+	$(BUILD_DIR)/asm/RevoSDK/wpad/lint.o \
+	$(BUILD_DIR)/asm/RevoSDK/wpad/WUD.o \
+	$(BUILD_DIR)/asm/RevoSDK/wpad/WUDHidHost.o 

@@ -18,6 +18,18 @@ RVL_SDK_1_O_FILES :=\
 	$(RVL_SDK_EXI_O_FILES) \
 	$(RVL_SDK_SI_O_FILES)
 	
+RVL_SDK_2_O_FILES :=\
+	$(RVL_SDK_MEM_O_FILES) \
+	$(RVL_SDK_EUART_O_FILES) \
+	$(RVL_SDK_FS_O_FILES) \
+	$(RVL_SDK_IPC_O_FILES) \
+	$(RVL_SDK_NAND_O_FILES) \
+	$(RVL_SDK_SC_O_FILES) \
+	$(RVL_SDK_WENC_O_FILES) \
+	$(RVL_SDK_ARC_O_FILES) \
+	$(RVL_SDK_CX_O_FILES) \
+	$(RVL_SDK_WPAD_O_FILES) 
+
 
 include obj_files_mw.mk
 MW_O_FILES :=\
@@ -26,6 +38,11 @@ MW_O_FILES :=\
 
 MW_1_O_FILES :=\
 	$(PPC_EABI_SUPPORT_METROTRK_O_FILES)
+
+
+NDEV_O_FILES :=\
+	$(BUILD_DIR)/asm/NdevExi2A/DebuggerDriver.o \
+	$(BUILD_DIR)/asm/NdevExi2A/exi.o
 
 
 INIT_O_FILES :=\
