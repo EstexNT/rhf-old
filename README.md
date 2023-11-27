@@ -1,5 +1,5 @@
 # Deprecated
-Please see https://github.com/EstexNT/rhf for the new repo
+Please see https://github.com/EstexNT/rhf-dtk for the new repo
 
 # Rhythm Heaven Fever Disassembly (US)
 
