@@ -1,3 +1,6 @@
+# Deprecated
+Please see https://github.com/EstexNT/rhf for the new repo
+
 # Rhythm Heaven Fever Disassembly (US)
 
 It builds the following DOL:
